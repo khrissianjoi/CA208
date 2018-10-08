@@ -1,3 +1,3 @@
 # CA208
 
-Logic
+Prolog
