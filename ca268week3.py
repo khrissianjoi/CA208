@@ -1,3 +1,5 @@
+phone_numbers.py 
+
 print("Enter a name and number, or a name and ? to query (!! to exit)\n", end="")
 
 n = True
@@ -17,3 +19,30 @@ while n:
 	elif string == "!!":
 		print("Bye")
 		n = False
+_____________________________________________________________________________________
+student_marks.py
+
+import sys
+def make_map():
+	dic = {}	
+	f = sys.stdin.readlines()
+	for line in f:
+		line = line.split()
+		dic[line[0]] = line[1]
+
+	return dic
+
+_____________________________________________________________________________________
+word_length.py
+
+import sys
+def get_counts_dict(lst):
+	dic = {}
+	for word in lst:
+		count = len(word)
+		if count not in dic:
+			dic[count] = 1
+		elif count in dic:
+			dic[count] += 1
+
+	return dic
