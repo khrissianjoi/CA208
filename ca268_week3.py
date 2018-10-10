@@ -46,3 +46,46 @@ def get_counts_dict(lst):
 			dic[count] += 1
 
 	return dic
+
+_____________________________________________________________________________________	
+ reverse_input.py
+
+def reverse_input(stack):
+   for line in sys.stdin:
+      a = []
+      for c in line:
+         stack.push(c)
+
+      while not stack.is_empty():
+         a.append(stack.pop())
+
+      print("".join(a).lstrip())
+
+_____________________________________________________________________________________
+check_brackets.py
+
+def check_brackets(line):
+   stack = Stack()
+   if len(line) <= 2:
+      for c in line:
+         if c == "(":
+            stack.push(c)
+         elif c == ")":
+            stack.pop() 
+
+      return(stack.is_empty())
+   else:
+      return False
+
+
+_____________________________________________________________________________________
+print_queue.py
+
+def print_queue(data, front, back):
+   i = front
+   a = []
+   while i != back:
+      a.append(data[i])
+      i = (i + 1) % len(data)
+
+   print(a)
