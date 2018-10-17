@@ -26,3 +26,11 @@
 		while new_curr != None:
 			self.add(new_curr.item)
 			new_curr = new_curr.next
+
+def detect_loop(linkedlst):
+	curr = linkedlst.head
+	while curr != None:
+		curr = curr.next
+		if curr == linkedlst.head:
+			return True
+	return False
