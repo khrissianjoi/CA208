@@ -35,3 +35,19 @@ uncle(X, Y) :- brother(X, Z), father(Z, Y).
 aunt(X, Y) :- female(X), parents(_, T, X), uncle(T, Y).
 
 cousin(X, Y) :- grandfather(Z, X), grandfather(Z, Y), father(W, X), father(R, Y), brother(W, R), father(Z, W).
+
+__________________________________________________________________________
+
+%class(X,Y) :- Y == negative, negative(X), !; Y == positive, positive(X), !; Y == zero, zero(X), !.
+
+%negative(X) :- X < 0.
+%positive(X) :- X > 0.
+%zero(X) :- X is 0.
+
+class(0,zero) :- !.
+class(X, positive) :- X > 0, !.
+class(X, negative) :- X < 0.
+
+split([],[],[]) :- !.
+split([HI|TI], [HI|TP], N) :- split(TI, TP, N), !.
+split([HI|TI], P, [HI|TN]) :- split(TI, P, TN), !.
