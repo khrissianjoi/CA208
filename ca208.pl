@@ -44,9 +44,9 @@ __________________________________________________________________________
 %positive(X) :- X > 0.
 %zero(X) :- X is 0.
 
-class(0,zero) :- !.
 class(X, positive) :- X > 0, !.
-class(X, negative) :- X < 0.
+class(X, negative) :- X < 0, !.
+class(0,zero).
 
 split([],[],[]) :- !.
 split([HI|TI], [HI|TP], N) :- split(TI, TP, N), !.
