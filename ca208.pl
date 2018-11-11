@@ -46,8 +46,9 @@ __________________________________________________________________________
 
 class(X, positive) :- X > 0, !.
 class(X, negative) :- X < 0, !.
-class(0,zero).
+class(0, zero).
 
 split([],[],[]) :- !.
-split([HI|TI], [HI|TP], N) :- split(TI, TP, N), !.
-split([HI|TI], P, [HI|TN]) :- split(TI, P, TN), !.
+split([HI|TI], P, [HI|TN]) :- class(HI, negative), split(TI, P, TN), !.
+split([HI|TI], [HI|PN], N) :- class(HI, positive), split(TI, PN, N), !; class(HI, zero), split(TI, PN, N), !.
+
