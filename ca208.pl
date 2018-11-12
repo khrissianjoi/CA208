@@ -38,6 +38,50 @@ cousin(X, Y) :- grandfather(Z, X), grandfather(Z, Y), father(W, X), father(R, Y)
 
 __________________________________________________________________________
 
+
+book(illiad,homer,study,500).
+book(c,richie,study, 150).
+book(ntbible,sams,reference,480).
+book(ntfordummies,bob, reference,200).
+book(montypython,cleese,comedy,300).
+book(pythonalgorithms,david,study, 225).
+book(lilacbus,binchey,fiction,200).
+book(hamlet,shakespere,drama,450).
+
+build_library(Lib) :- findall(book(Title, Author, Genre, Size), book(Title, Author, Genre, Size), Lib).
+
+
+/* To find the leisure books in the library first build the library from the
+   facts below and then query the library e.g.
+
+   build_library(Lib),leisure(B,Lib).
+*/
+
+leisure_book(book(_, _, Genre, _)) :- Genre == comedy.
+leisure_book(book(_, _, Genre, _)) :- Genre == fiction.
+leisure(_,[]).
+leisure(H, [H | _]) :- leisure_book(H).
+leisure(B, [_ | T]) :- leisure(B, T).
+
+literature_book(book(_, _, Genre,_)) :- Genre == drama.
+literature(_,[]).
+literature(B, [B | _]) :- literature_book(B).
+literature(B, [_ | T]) :- literature(B, T).
+
+revision_book(book(_, _, Genre, Page)) :- Genre == study, Page > 300.
+revision_book(book(_, _, Genre, Page)) :- Genre == reference, Page > 300.
+revision(_,[]).
+revision(B, [B | _]) :- revision_book(B).
+revision(B, [_|T]) :- revision(B, T).
+
+holiday_book(book(_, _, Genre, Page)) :- Genre \== study , Genre \== reference, Page < 400.
+holiday(_,[]).
+holiday(B,[B|_]) :- holiday_book(B).
+holiday(B,[_|T]) :- holiday(B,T).
+
+__________________________________________________________________________
+
+
 %class(X,Y) :- Y == negative, negative(X), !; Y == positive, positive(X), !; Y == zero, zero(X), !.
 
 %negative(X) :- X < 0.
