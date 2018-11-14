@@ -81,6 +81,29 @@ holiday(B,[_|T]) :- holiday(B,T).
 
 __________________________________________________________________________
 
+myElem(X, [X|_]).
+myElem(X,[_|T]) :- myElem(X,T).
+
+myHead(X,[X|_]).
+
+myLast(X,[X|[]]).
+myLast(X, [_|T]) :- myLast(X, T).
+
+myTail(A,[_|A]).
+myTail(A,[_|B]) :- myTail(A,B).
+
+%myAppend(A,B,C).
+
+myAppend([],X,X).
+myAppend([HA|TA],B,[HA|TC]) :- myAppend(TA,B,TC).
+
+myReverse([], []).
+myReverse([H|T],B) :- myReverse(T,S), myAppend(S,[H],B).
+
+myDelete(X, [X|B], B).
+myDelete(X, [_|A], [_|B]) :- myDelete(X, A, B).
+
+__________________________________________________________________________
 
 %class(X,Y) :- Y == negative, negative(X), !; Y == positive, positive(X), !; Y == zero, zero(X), !.
 
