@@ -101,7 +101,7 @@ myReverse([], []).
 myReverse([H|T],B) :- myReverse(T,S), myAppend(S,[H],B).
 
 myDelete(X, [X|B], B).
-myDelete(X, [_|A], [_|B]) :- myDelete(X, A, B).
+myDelete(X, [Y|A], [Y|B]) :- myDelete(X, A, B).
 
 __________________________________________________________________________
 
