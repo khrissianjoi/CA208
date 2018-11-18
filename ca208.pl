@@ -112,9 +112,20 @@ myFib(X, N) :- X1 is X - 1, X2 is X -2, myFib(X1, N1), myFib(X2, N2), N is N1 + 
 myCount(0, []) :- !.
 myCount(X, [_|T]) :- myCount(X1, T), X is X1 + 1.
 
+mySum([], 0).
+mySum([H|A], B) :- mySum(A, X), B is H + X.
+
 myMax([],_) :- !.
 myMax([H|A], B) :- H =< B, myMax(A, B), !.
 myMax([H|A], B) :- H == B, myMax(A,B), !.
+
+:- op(500, yfx, pow).
+%A/B pow X :- myPower(A, B, X).
+%myPower(_, 0, _) :- !.
+%myPower(A, B, X) :- T is B - 1, myPower(A, T, X), X is A * A, !.
+
+_/0 pow _ :- !.
+A/B pow X :- T is B - 1, A/T pow X, X is A * A, !.
 
 __________________________________________________________________________
 
