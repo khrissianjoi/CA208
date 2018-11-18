@@ -97,11 +97,24 @@ myTail(A,[_|B]) :- myTail(A,B).
 myAppend([],X,X).
 myAppend([HA|TA],B,[HA|TC]) :- myAppend(TA,B,TC).
 
-myReverse([], []).
-myReverse([H|T],B) :- myReverse(T,S), myAppend(S,[H],B).
+myReverse(L,R) :- myReverse(L,[],R).
+myReverse([], R, R).
+myReverse([L|Ls], Acc, R) :- myReverse(Ls,[L|Acc],R).
 
 myDelete(X, [X|B], B).
 myDelete(X, [Y|A], [Y|B]) :- myDelete(X, A, B).
+__________________________________________________________________________
+
+myFib(0,0) :- !.
+myFib(1,1) :- !.
+myFib(X, N) :- X1 is X - 1, X2 is X -2, myFib(X1, N1), myFib(X2, N2), N is N1 + N2, !.
+
+myCount(0, []) :- !.
+myCount(X, [_|T]) :- myCount(X1, T), X is X1 + 1.
+
+myMax([],_) :- !.
+myMax([H|A], B) :- H =< B, myMax(A, B), !.
+myMax([H|A], B) :- H == B, myMax(A,B), !.
 
 __________________________________________________________________________
 
@@ -118,4 +131,68 @@ class(0, zero).
 split([],[],[]) :- !.
 split([HI|TI], P, [HI|TN]) :- class(HI, negative), split(TI, P, TN), !.
 split([HI|TI], [HI|PN], N) :- class(HI, positive), split(TI, PN, N), !; class(HI, zero), split(TI, PN, N), !.
+
+__________________________________________________________________________
+
+directlyNorth(a,f).
+directlyNorth(b,g).
+directlyNorth(c,h).
+directlyNorth(d,i).
+directlyNorth(e,j).
+directlyNorth(f,k).
+directlyNorth(g,l).
+directlyNorth(h,m).
+directlyNorth(i,n).
+directlyNorth(j,o).
+directlyNorth(k,p).
+directlyNorth(l,q).
+directlyNorth(m,r).
+directlyNorth(n,s).
+directlyNorth(o,t).
+
+directlyEast(a,b).
+directlyEast(b,c).
+directlyEast(c,d).
+directlyEast(d,e).
+directlyEast(f,g).
+directlyEast(g,h).
+directlyEast(h,i).
+directlyEast(i,j).
+directlyEast(k,l).
+directlyEast(l,m).
+directlyEast(m,n).
+directlyEast(n,o).
+directlyEast(p,q).
+directlyEast(q,r).
+directlyEast(r,s).
+directlyEast(s,t).
+
+
+% Rules
+
+directlySouth(S,N) :- directlyNorth(N,S).
+
+directlyWest(W,E) :- directlyEast(E,W).
+
+
+north(A,B) :- directlyNorth(A,B).
+north(A,B) :- directlyNorth(A,C), north(C,B).
+
+south(A,B) :- directlySouth(A,B).
+south(A,B) :- directlySouth(A,C), south(C,B).
+
+east(A,B) :- directlyEast(A,B).
+east(A,B) :- directlyEast(A,C), east(C,B).
+
+west(A,B) :- directlyWest(A,B).
+west(A,B) :- directlyWest(A,C), west(C,B).
+
+southwest(A,B) :- south(A,C), west(C,B).
+
+northwest(A,B) :- north(A,C), west(C,B).
+
+southeast(A,B) :- south(A,C), east(C,B).
+
+northeast(A,B) :- north(A,C), east(C,B).
+
 
