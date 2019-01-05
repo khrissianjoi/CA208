@@ -59,13 +59,13 @@ User Catalogue
    
 ______________________________________________________
 
-## Logical Data Modelling
+Logical Data Modelling
   Logical Data Model
     Vehicle for analysising the logical structure of an organisation's information.
     Graphical representation of information, its relations to other information and business concepts.
     Consists of:
-      Logical Data Structure (LDS)
-      Textual description explaining all parts of the LDS
+      - Logical Data Structure (LDS)
+      - Textual description explaining all parts of the LDS
    Validating LDM:
     LDM must provide access to all data items required by each update or enquiry process.
       
@@ -95,24 +95,24 @@ ______________________________________________________
 
 Data FLow Diagrams
   Validating Data Flow Diagrams:
-    Has each process a strong imperative verb and object?
-    Are the input data flows related to the output data flows?
-    Can the flows be reduced?
-    Have all data stores flows in and out?
-    Are symbols correctly labelled and uniquely referenced?
-    Do external entities communicate with at least one process?
-    Does the user think that it is an accurate portrayal of the business area?
+    - Has each process a strong imperative verb and object?
+    - Are the input data flows related to the output data flows?
+    - Can the flows be reduced?
+    - Have all data stores flows in and out?
+    - Are symbols correctly labelled and uniquely referenced?
+    - Do external entities communicate with at least one process?
+    - Does the user think that it is an accurate portrayal of the business area?
     
 Document Flow Diagram
     Purpose:
-     Illustrates the flow of physical documents associated with the area being investigated. 
+     - Illustrates the flow of physical documents associated with the area being investigated. 
     Process (5 steps):
-      Identify recipients and sources of documents (inside or outside boundry).
-      Identify documents which connect recipient and source.
-      Convert each source and recipient into an external entity symbol.
-      Add data flow to represent each connecting document.
-      Add system boundary (exclude external entities found in context diagram).
-      Are the input data flows related to the output data flows?
+      - Identify recipients and sources of documents (inside or outside boundry).
+      - Identify documents which connect recipient and source.
+      - Convert each source and recipient into an external entity symbol.
+      - Add data flow to represent each connecting document.
+      - Add system boundary (exclude external entities found in context diagram).
+      - Are the input data flows related to the output data flows?
 ______________________________________________________
 
 Entity Life History
