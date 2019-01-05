@@ -9,13 +9,50 @@ Business Activity Modelling
     
 Work Practice Modelling
   Purpose:
-    Defines who where how and (maybe) why of the business activity. 
+    Defines who, where, how, and (maybe) why of the business activity. 
     Allocates responsibilities to humans.
     Products include: User Catalogue, Task Models, Task Scenarios, and User Roles.
   
 Hierarchical Task Model
   The arrangement of the activties/tasks (from the BAM) in a hierarchy.
-  
+  Purpose:
+    Validating Task Models.
+    
+User Catalogue
+  Documenting job title and business activities of each jobholder (user). A summary of the Work Practice Model arranged by job title.
+  Purpose:
+    Identify relevenat jobholders (users)
+    Define the outward appearance of the new system.
+   Coloumns: Job Title, Responsibility (Job Activity)
+   
+   
+______________________________________________________
+
+Logical Data Modelling
+  Logical Data Model
+    Vehicle for analysising the logical structure of an organisation's information.
+    Graphical representation of information, its relations to other information and business concepts.
+    Consists of:
+      Logical Data Structure (LDS)
+      Textual description explaining all parts of the LDS
+      
+  Entity
+    EXAMPLE
+    Entity Type:           Occurances/Attributes:
+     Supplier               Supplier No
+                            Supplier Name
+                            Supplier Address
+    Must be occurances > 1
+    Occurances of that entity must be unqiuely identifiable.
+    
+      Relationships
+      (m:n) - ><
+      (1:m) - -<
+      (1:1) - ___
+      
+      example of optionality: supplier ----< pruchase order
+______________________________________________________
+
 Entity Life History
   Puropose:
    Analysis - to show the consideration of the occurances of the entity (updates and current states)
