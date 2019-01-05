@@ -1,7 +1,7 @@
 Methodologies
 Object Oriented Development
   Suited to process oriented systems implemented in OO environment
-  “systems that are strongly database-oriented……are not ideally suited to object oriented development” - Bennett, McRobb & Farmer
+  “systems that are strongly database-oriented……are not ideally suited to object oriented development”
    Requires high level of expertise
    Often used for customisable packages (e.g. SAP)
 RAD
@@ -18,11 +18,12 @@ Structured Systems Analysis & Design Method (SSADM)
   of the complete model.
 
   The Data/Structure View: 
-    a description of all the data and information the system uses (gained from the DFDs above)
+    - a description of all the data and information the system uses (gained from the DFDs above)
   The Process View:
-    a description of all the processes or actions carried out by the system (taken from the process descriptions and the process catalogue)
+    - a description of all the processes or actions carried out by the system (taken from the process descriptions and the 
+      process catalogue)
   The Event/Time View:
-    a description of the systems events, that is the 'triggers' that set processes running (from the Entity life histories)
+    - a description of the systems events, that is the 'triggers' that set processes running (from the Entity life histories)
   
   Taking these different views allows us to gain much more information about the system than we could have done otherwise.
 __________________________________________________
@@ -38,26 +39,27 @@ Business Activity Modelling
     
 Work Practice Modelling
   Purpose:
-    Defines who, where, how, and (maybe) why of the business activity. 
-    Allocates responsibilities to humans.
+    - Defines who, where, how, and (maybe) why of the business activity. 
+    -  responsibilities to humans.
     Products include: User Catalogue, Task Models, Task Scenarios, and User Roles.
   
 Hierarchical Task Model
   The arrangement of the activties/tasks (from the BAM) in a hierarchy.
   Purpose:
-    Validating Task Models.
+    - Validating Task Models.
     
 User Catalogue
-  Documenting job title and business activities of each jobholder (user). A summary of the Work Practice Model arranged by job title.
+  Documenting job title and business activities of each jobholder (user). A summary of the Work Practice Model arranged by 
+  job title.
   Purpose:
-    Identify relevenat jobholders (users)
-    Define the outward appearance of the new system.
+    - Identify relevenat jobholders (users)
+    - Define the outward appearance of the new system.
    Coloumns: Job Title, Responsibility (Job Activity)
    
    
 ______________________________________________________
 
-Logical Data Modelling
+## Logical Data Modelling
   Logical Data Model
     Vehicle for analysising the logical structure of an organisation's information.
     Graphical representation of information, its relations to other information and business concepts.
