@@ -76,7 +76,7 @@ Graphical representation of information, its relations to other information and 
 **Validating LDM:**
 LDM must provide access to all data items required by each update or enquiry process.
 
-## Entity
+### Entity
 EXAMPLE
 ```
 Entity Type:           Occurances/Attributes:
@@ -87,7 +87,7 @@ Entity Type:           Occurances/Attributes:
 Must be occurances > 1
 Occurances of that entity must be unqiuely identifiable.
 
-## Relationships
+### Relationships
 
 (m:n) - ><
 
