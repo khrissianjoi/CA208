@@ -19,8 +19,10 @@ of the complete model.
 
 **The Data/Structure View:**
 - a description of all the data and information the system uses (gained from the DFDs above)
+
 **The Process View:**
 - a description of all the processes or actions carried out by the system (taken from the process descriptions and the process catalogue)
+
 **The Event/Time View:**
 - a description of the systems events, that is the 'triggers' that set processes running (from the Entity life histories)
   
@@ -30,7 +32,8 @@ __________________________________________________
 ### Business Activity Modelling
 Network of activities
 Pictorial representation of the business.
-*Purpose:*
+
+**Purpose:**
 - Helps pick out the requirements, focus on the areas of concern. 
 - Puts the system in perspective, helps to inform the client what is possible.
 - It can increase user participation and encourage users to build a sense of ownership for the future system.
@@ -44,12 +47,14 @@ Products include: User Catalogue, Task Models, Task Scenarios, and User Roles.
   
 ### Hierarchical Task Model
 The arrangement of the activties/tasks (from the BAM) in a hierarchy.
+
 **Purpose:**
 - Validating Task Models.
     
 ### User Catalogue
 Documenting job title and business activities of each jobholder (user). A summary of the Work Practice Model arranged by 
 job title.
+
 **Purpose:**
 - Identify relevenat jobholders (users)
 - Define the outward appearance of the new system.
@@ -62,31 +67,41 @@ ______________________________________________________
 ## Logical Data Model
 Vehicle for analysising the logical structure of an organisation's information.
 Graphical representation of information, its relations to other information and business concepts.
+
 **Consists of:**
 - Logical Data Structure (LDS)
 - Textual description explaining all parts of the LDS
+
 **Validating LDM:**
 LDM must provide access to all data items required by each update or enquiry process.
 
 ## Entity
-  EXAMPLE
-  Entity Type:           Occurances/Attributes:
-   Supplier               Supplier No
-                          Supplier Name
-                          Supplier Address
-  Must be occurances > 1
-  Occurances of that entity must be unqiuely identifiable.
+EXAMPLE
+```
+Entity Type:           Occurances/Attributes:
+ Supplier               Supplier No
+                        Supplier Name
+                        Supplier Address
+```    
+Must be occurances > 1
+Occurances of that entity must be unqiuely identifiable.
 
 ## Relationships
+
 (m:n) - ><
+
 (1:m) - -<
+
 (1:1) - ___ 
-optionality (dash): supplier ----< pruchase order
-- Redundant Relationships:
-Unnecessary relationships.
+
+optionality (dash): supplier ----< purchase order
+
+**Redundant Relationships:**
+- Unnecessary relationships.
 *Explain how M:N, 1:1 and redundant relationships can be removed from an LDS and
 update your LDS from 1(a) to reflect this. ????*
-- Reflexive Relationship:
+
+**- Reflexive Relationship:**
 1:1
 example: Pig's Ear, Product (entity) 'substitution'
 
@@ -106,6 +121,7 @@ ______________________________________________________
 ## Document Flow Diagram
 **Purpose:**
 - Illustrates the flow of physical documents associated with the area being investigated. 
+
 **Process (5 steps):**
 - Identify recipients and sources of documents (inside or outside boundry).
 - Identify documents which connect recipient and source.
