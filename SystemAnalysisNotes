@@ -1,0 +1,22 @@
+Business Activity Modelling
+  Netowrk of activities
+  Pictorial representation of the business.
+  Purpose:
+    Helps pick out the requirements, focus on the areas of concern. 
+    Puts the system in perspective, helps to inform the client what is possible.
+    It can increase user participation and encourage users to build a sense of ownership for the future system.
+    Defines what and when of the business activity.
+    
+Work Practice Modelling
+  Purpose:
+    Defines who where how and (maybe) why of the business activity. 
+    Allocates responsibilities to humans.
+    Products include: User Catalogue, Task Models, Task Scenarios, and User Roles.
+  
+Hierarchical Task Model
+  The arrangement of the activties/tasks (from the BAM) in a hierarchy.
+  
+Entity Life History
+  Puropose:
+   Analysis - to show the consideration of the occurances of the entity (updates and current states)
+   Design - program specification
