@@ -30,27 +30,27 @@ __________________________________________________
 ### Business Activity Modelling
 Network of activities
 Pictorial representation of the business.
-Purpose:
+*Purpose:*
 - Helps pick out the requirements, focus on the areas of concern. 
 - Puts the system in perspective, helps to inform the client what is possible.
 - It can increase user participation and encourage users to build a sense of ownership for the future system.
-- Defines what and when of the business activity.
+- Defines *what* and *when* of the business activity.
     
 ### Work Practice Modelling
-Purpose:
-- Defines who, where, how, and (maybe) why of the business activity. 
+**Purpose:**
+- Defines *who*, *where*, *how*, and (maybe) *why* of the business activity. 
 -  responsibilities to humans.
 Products include: User Catalogue, Task Models, Task Scenarios, and User Roles.
   
 ### Hierarchical Task Model
 The arrangement of the activties/tasks (from the BAM) in a hierarchy.
-Purpose:
+**Purpose:**
 - Validating Task Models.
     
 ### User Catalogue
 Documenting job title and business activities of each jobholder (user). A summary of the Work Practice Model arranged by 
 job title.
-Purpose:
+**Purpose:**
 - Identify relevenat jobholders (users)
 - Define the outward appearance of the new system.
  Coloumns: Job Title, Responsibility (Job Activity)
@@ -62,10 +62,10 @@ ______________________________________________________
 ## Logical Data Model
 Vehicle for analysising the logical structure of an organisation's information.
 Graphical representation of information, its relations to other information and business concepts.
-Consists of:
+**Consists of:**
 - Logical Data Structure (LDS)
 - Textual description explaining all parts of the LDS
-Validating LDM:
+**Validating LDM:**
 LDM must provide access to all data items required by each update or enquiry process.
 
 ## Entity
@@ -116,6 +116,6 @@ ______________________________________________________
 ______________________________________________________
 
 ## Entity Life History
-**Puropose:
+**Puropose:**
  Analysis - to show the consideration of the occurances of the entity (updates and current states)
  Design - program specification
