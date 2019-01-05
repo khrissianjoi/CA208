@@ -82,8 +82,13 @@ Logical Data Modelling
       (1:1) - ___Has each process a strong imperative verb and object?
         Redundant Relationships:
           Unnecessary relationships.
+          Explain how M:N, 1:1 and redundant relationships can be removed from an LDS and
+          update your LDS from 1(a) to reflect this. ????
+        Reflexive Relationship:
+          1:1
+          example: Pig's Ear, Product (entity) 'substitution'
       
-      example of optionality: supplier ----< pruchase order
+      example of optionality (dash): supplier ----< pruchase order
 ______________________________________________________
 
 Data FLow Diagrams
