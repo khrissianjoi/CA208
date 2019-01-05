@@ -14,7 +14,7 @@
 ### Structured Systems Analysis & Design Method (SSADM)
 Each of the three system models provides a different viewpoint of the same system, 
 each of which are required to form a complete model of the system. 
-Within SSADM, each of the three techniques is cross-referenced against the others to ensure the completeness and accuracy 
+Within SSADM, each of the three techniques is *cross-referenced* against the others to ensure the completeness and accuracy 
 of the complete model.
 
 **The Data/Structure View:**
@@ -31,6 +31,7 @@ __________________________________________________
 ## Business Activity Model
 ### Business Activity Modelling
 Network of activities
+
 Pictorial representation of the business.
 
 **Purpose:**
@@ -63,8 +64,8 @@ job title.
    
 ______________________________________________________
 
-## Logical Data Modelling
 ## Logical Data Model
+### Logical Data Modelling
 Vehicle for analysising the logical structure of an organisation's information.
 Graphical representation of information, its relations to other information and business concepts.
 
@@ -110,17 +111,17 @@ ______________________________________________________
 ## Data Flow
 ### Data Flow Diagrams
 **Validating Data Flow Diagrams:**
-- Has each process a strong imperative verb and object?
-- Are the input data flows related to the output data flows?
-- Can the flows be reduced?
+- Has each process (middle) a strong imperative verb and object?
 - Have all data stores flows in and out?
-- Are symbols correctly labelled and uniquely referenced?
+- Can the flows be reduced?
 - Do external entities communicate with at least one process?
 - Does the user think that it is an accurate portrayal of the business area?
+- Are the input data flows related to the output data flows?
+- Are symbols correctly labelled and uniquely referenced?
     
 ## Document Flow Diagram
 **Purpose:**
-- Illustrates the flow of physical documents associated with the area being investigated. 
+Illustrates the flow of physical documents associated with the area being investigated. 
 
 **Process (5 steps):**
 - Identify recipients and sources of documents (inside or outside boundry).
@@ -128,10 +129,10 @@ ______________________________________________________
 - Convert each source and recipient into an external entity symbol.
 - Add data flow to represent each connecting document.
 - Add system boundary (exclude external entities found in context diagram).
-- Are the input data flows related to the output data flows?
 ______________________________________________________
 
-## Entity Life History
-**Puropose:**
- Analysis - to show the consideration of the occurances of the entity (updates and current states)
- Design - program specification
+### Entity Life History
+
+**Purpose:**
+Analysis - to show the consideration of the occurances of the entity (updates and current states)
+Design - program specification
