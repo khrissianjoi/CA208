@@ -28,7 +28,7 @@ Structured Systems Analysis & Design Method (SSADM)
   Taking these different views allows us to gain much more information about the system than we could have done otherwise.
 __________________________________________________
 
-Business Activity Modelling
+##Business Activity Modelling
   Network of activities
   Pictorial representation of the business.
   Purpose:
@@ -37,18 +37,18 @@ Business Activity Modelling
     - It can increase user participation and encourage users to build a sense of ownership for the future system.
     - Defines what and when of the business activity.
     
-Work Practice Modelling
+##Work Practice Modelling
   Purpose:
     - Defines who, where, how, and (maybe) why of the business activity. 
     -  responsibilities to humans.
     Products include: User Catalogue, Task Models, Task Scenarios, and User Roles.
   
-Hierarchical Task Model
+##Hierarchical Task Model
   The arrangement of the activties/tasks (from the BAM) in a hierarchy.
   Purpose:
     - Validating Task Models.
     
-User Catalogue
+##User Catalogue
   Documenting job title and business activities of each jobholder (user). A summary of the Work Practice Model arranged by 
   job title.
   Purpose:
@@ -59,7 +59,7 @@ User Catalogue
    
 ______________________________________________________
 
-Logical Data Modelling
+##Logical Data Modelling
   Logical Data Model
     Vehicle for analysising the logical structure of an organisation's information.
     Graphical representation of information, its relations to other information and business concepts.
@@ -93,7 +93,7 @@ Logical Data Modelling
       example of optionality (dash): supplier ----< pruchase order
 ______________________________________________________
 
-Data FLow Diagrams
+##Data FLow Diagrams
   Validating Data Flow Diagrams:
     - Has each process a strong imperative verb and object?
     - Are the input data flows related to the output data flows?
@@ -103,7 +103,7 @@ Data FLow Diagrams
     - Do external entities communicate with at least one process?
     - Does the user think that it is an accurate portrayal of the business area?
     
-Document Flow Diagram
+##Document Flow Diagram
     Purpose:
      - Illustrates the flow of physical documents associated with the area being investigated. 
     Process (5 steps):
@@ -115,7 +115,7 @@ Document Flow Diagram
       - Are the input data flows related to the output data flows?
 ______________________________________________________
 
-Entity Life History
+##Entity Life History
   Puropose:
    Analysis - to show the consideration of the occurances of the entity (updates and current states)
    Design - program specification
