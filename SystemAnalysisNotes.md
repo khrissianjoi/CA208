@@ -169,6 +169,15 @@ Illustrates the flow of physical documents associated with the area being invest
 - Add data flow to represent each connecting document.
 - Add system boundary (exclude external entities found in context diagram).
 
+Document Flow Diagram can be transformed to a Data Flow Diagram (DFD)
+- What process generates this document flow?
+- What process receives this document flow?
+- Is the document stored by a process?
+- Where is the document stored?
+- Is the document created from stored data?
+- What business activity triggers the process?
+- Is the document a source of new data?
+
 ### Levelling
 - Each lower level explains a single process from the level above.
 - All inputs and outputs to a process on the higher level appear in the lower level.
