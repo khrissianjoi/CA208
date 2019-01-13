@@ -27,8 +27,44 @@ of the complete model.
 - a description of the systems events, that is the 'triggers' that set processes running (from the Entity life histories)
   
 Taking these different views allows us to gain much more information about the system than we could have done otherwise.
-__________________________________________________
+
+### Methods for capturing software system requirements:
+These techniques are used to uncover all requirements and build support and trust among users.
+- **Interviews:**
+  - select people to interview
+  - design interview questions
+  - prepare for the interview
+  - perform the interiew
+  - follow-up after the interview
+- **Joint Application Development:**
+  - joint user analyst meeting hosted by a facilitator
+  - anonymoulsy or electronically
+  - careful planning, users may need documents
+  
+- **Questionnaires:**
+  a set of written (paper or electronic) questions used to obtain information from individuals
+  - select participants
+  - design, careful question selection, remove ambiguities
+  - administering the questionnaire (free pens)
+  - follow-up, thank you message
+  
+- **Document Analysis:**
+  - review technical documents when available
+  - review typical user documents (forms, reports, policy manual)
+  - look for user additions to froms
+  - look for unused form elements
+  
+- **Observation**
+
+ #### Factors that contribute to uncertainty: ####
+ - bad organisational factors (unclear roles, dissagreement, diverse users)
+ - very complexapplication
+ - inexperienced users
+ - inexperienced analysts
+
+_____________________________________________
 ## Business Activity Model
+
 ### Business Activity Modelling
 Network of activities
 
@@ -98,17 +134,18 @@ Occurances of that entity must be unqiuely identifiable.
 optionality (dash): supplier ----< purchase order
 
 **Redundant Relationships:**
-- Unnecessary relationships.
+- Unnecessary relationships, will involve in maintainenance overhead if implemented
+can be removed: 
 *Explain how M:N, 1:1 and redundant relationships can be removed from an LDS and
 update your LDS from 1(a) to reflect this. ????*
 
 **- Reflexive Relationship:**
-1:1
+1:1 replationship
 example: Pig's Ear, Product (entity) 'substitution'
 
 ______________________________________________________
 
-## Data Flow
+## Data Flow Modelling
 ### Data Flow Diagrams
 **Validating Data Flow Diagrams:**
 - Has each process (middle) a strong imperative verb and object?
@@ -118,8 +155,10 @@ ______________________________________________________
 - Does the user think that it is an accurate portrayal of the business area?
 - Are the input data flows related to the output data flows?
 - Are symbols correctly labelled and uniquely referenced?
-    
-## Document Flow Diagram
+
+### Context Diagram
+External entities represents the outside world
+### Document Flow Diagram
 **Purpose:**
 Illustrates the flow of physical documents associated with the area being investigated. 
 
@@ -129,10 +168,38 @@ Illustrates the flow of physical documents associated with the area being invest
 - Convert each source and recipient into an external entity symbol.
 - Add data flow to represent each connecting document.
 - Add system boundary (exclude external entities found in context diagram).
+
+### Levelling
+- Each lower level explains a single process from the level above.
+- All inputs and outputs to a process on the higher level appear in the lower level.
+- The lower levels do not repeat information in a higher level diagram.
+- You can use as many second level diagrams you think that are necessary.
+
 ______________________________________________________
 
 ### Entity Life History
 
 **Purpose:**
+Documents all of the events that can affect an entity. 
 Analysis - to show the consideration of the occurances of the entity (updates and current states)
 Design - program specification
+
+- **Quit and Resume:**
+  - quit - to allow for the fact that a cancellation can take place any time.
+ 
+ 
+______________________________________________________
+
+## Coupling and Cohesion
+
+**Design concept** (FICPCLC):
+  - Functional
+  - Informational
+  - Communicational
+  - Procedural
+  - Classical
+  - Logical
+  - Coincidental
+
+
+
