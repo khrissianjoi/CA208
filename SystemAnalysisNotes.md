@@ -14,6 +14,7 @@
 ### Structured Systems Analysis & Design Method (SSADM)
 Each of the three system models provides a different viewpoint of the same system, 
 each of which are required to form a complete model of the system. 
+
 Within SSADM, each of the three techniques is *cross-referenced* against the others to ensure the completeness and accuracy 
 of the complete model.
 
@@ -31,6 +32,7 @@ Taking these different views allows us to gain much more information about the s
 ### Methods for capturing software system requirements:
 These techniques are used to uncover all requirements and build support and trust among users.
 - **Interviews:**
+'if you need to know something just ask'
   - select people to interview
   - design interview questions
   - prepare for the interview
@@ -44,7 +46,7 @@ These techniques are used to uncover all requirements and build support and trus
 - **Questionnaires:**
   a set of written (paper or electronic) questions used to obtain information from individuals
   - select participants
-  - design, careful question selection, remove ambiguities
+  - design (number questions to avoid confusion) careful question selection, remove ambiguities: begin with non threatening questions, no important questions at the end.
   - administering the questionnaire (free pens)
   - follow-up, thank you message
   
@@ -158,6 +160,7 @@ ______________________________________________________
 
 ### Context Diagram
 External entities represents the outside world
+
 ### Document Flow Diagram
 **Purpose:**
 Illustrates the flow of physical documents associated with the area being investigated. 
