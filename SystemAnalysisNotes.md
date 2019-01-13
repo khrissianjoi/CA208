@@ -179,6 +179,7 @@ Document Flow Diagram can be transformed to a Data Flow Diagram (DFD)
 - Is the document a source of new data?
 
 ### Levelling
+The decomposition of DFDs into lower level DFDs.
 - Each lower level explains a single process from the level above.
 - All inputs and outputs to a process on the higher level appear in the lower level.
 - The lower levels do not repeat information in a higher level diagram.
