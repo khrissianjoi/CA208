@@ -67,6 +67,22 @@ combine relations Client and Viewing
 select Client.ClientNo = Viewing.clientNo only
 σClient.clientNo = Viewing.clientNo((πclientNo, fName, lName(Client)) ×(πclientNo, propertyNo, comment (Viewing)))
 ```
-### Theta Join
+### Join
 
+#### Theta Join
 
+Theta join contains cartesian product (×) and selection (σ sigma)
+```SQL
+R ⋈ S<sub>F</sub> = σF (R × S)
+```
+#### Equijoin operation
+
+_List the names and comments of all clients who have viewed a property for rent._
+```SQL
+(πclientNo, fName, lName(Client)) ⋈ Client.clientNo=Viewing.clientNo (πclientNo, propertyNo, comment (Viewing))
+```
+
+#### Natural Join
+```SQL
+πclientNo, fName, lName(Client) ⋈ (πclientNo, propertyNo, comment (Viewing)
+```
