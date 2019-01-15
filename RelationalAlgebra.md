@@ -45,13 +45,12 @@ _List all cities where there is either a branch office or a property for rent._
 
 _List all cities where there is a branch office but no properties for rent._
 
-|πcity(Branch) − πcity(PropertyForRent)|
-| - | 
+<pre>πcity(Branch) − πcity(PropertyForRent)</pre>
+
 #### Intersection
 _List all cities where there is a branch office and also properties for rent._
 
-|πcity(Branch) ∩ πcity(PropertyForRent)|
-| - |
+<pre>πcity(Branch) ∩ πcity(PropertyForRent)</pre>
 
 ### Product
 
@@ -61,20 +60,18 @@ _List the names and comments of all clients who have viewed a property for rent.
 - The names of clients are held in the Client relation and the details of viewings are held in the Viewing relation.
 
 combine relations Client and Viewing
-|π(clientNo, fName, lName<sup>(Client)</sup>) × (πclientNo, propertyNo, comment<sup>(Viewing)</sup>)|
-| - |
+<pre>π(clientNo, fName, lName<sup>(Client)</sup>) × (πclientNo, propertyNo, comment<sup>(Viewing)</sup>)</pre>
 
 select Client.ClientNo = Viewing.clientNo only
-|σClient.clientNo = Viewing.clientNo((πclientNo, fName, lName<sup>(Client)</sup>) ×(πclientNo, propertyNo, comment <sup>(Viewing)</sup))|
-| - |
+<pre>σClient.clientNo = Viewing.clientNo((πclientNo, fName, lName<sup>(Client)</sup>) × (πclientNo, propertyNo, comment <sup>(Viewing)</sup>))</pre>
+ 
 ### Join
 
 #### Theta Join
 
 Theta join contains cartesian product (×) and selection (σ sigma)
 
-| R ⋈ S<sub>F</sub> = σ<sub>F</sub> (R × S) |
-| - |
+<pre>R ⋈ S<sub>F</sub> = σ<sub>F</sub> (R × S)</pre>
 
 #### Equijoin operation
 
