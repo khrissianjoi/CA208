@@ -72,9 +72,10 @@ select Client.ClientNo = Viewing.clientNo only
 #### Theta Join
 
 Theta join contains cartesian product (×) and selection (σ sigma)
-```SQL
-R ⋈ S<sub>F</sub> = σF (R × S)
-```
+
+| R ⋈ S<sub>F</sub> = σF (R × S) |
+| - |
+
 #### Equijoin operation
 
 _List the names and comments of all clients who have viewed a property for rent._
