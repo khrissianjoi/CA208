@@ -23,13 +23,11 @@ The PROJECT operation, unlike SELECT, selects certain columns from the table and
 π<attributelist >(R)
 
 _List of salaries for all staff, showing only the staffNo, fName, lName, and salary details._
-```SQL   
-πstaffNo, fName, lName, Salary(STAFF)
-```  
+ 
+<pre>πstaffNo, fName, lName, Salary<sup>(STAFF)</sup></pre> 
 _List of first name, last name, and salary of all employees who earn above 10000._
-```SQL  
-πstaffNo, fName, lName, Salary(σSalary > 10000(STAFF))  
-```  
+
+<pre>πstaffNo, fName, lName, Salary(σSalary > 10000<sup>(STAFF)</sup>)</pre>
 
 ### Type Compatability
 
@@ -37,10 +35,9 @@ _List of first name, last name, and salary of all employees who earn above 10000
 
 #### Union
 
-_List all cities where there is either a branch office or a property for rent._
-```SQL   
-πcity (Branch) ∪ πcity (PropertyForRent)
-```   
+_List all cities where there is either a branch office or a property for rent._   
+<pre>πcity<sup>(Branch)</sup> ∪ πcity<sup>(PropertyForRent)</sup></pre>
+
 #### Minus (Set Difference)
 
 _List all cities where there is a branch office but no properties for rent._
@@ -50,7 +47,7 @@ _List all cities where there is a branch office but no properties for rent._
 #### Intersection
 _List all cities where there is a branch office and also properties for rent._
 
-<pre>πcity(Branch) ∩ πcity(PropertyForRent)</pre>
+<pre>πcity<sup>(Branch)</sup> ∩ πcity<sup>(PropertyForRent)</sup></pre>
 
 ### Product
 
@@ -76,11 +73,19 @@ Theta join contains cartesian product (×) and selection (σ sigma)
 #### Equijoin operation
 
 _List the names and comments of all clients who have viewed a property for rent._
-```SQL
-(πclientNo, fName, lName(Client)) ⋈ Client.clientNo=Viewing.clientNo (πclientNo, propertyNo, comment (Viewing))
-```
+
+<pre>(πclientNo, fName, lName(Client)) ⋈<sub>Client.clientNo=Viewing.clientNo</sub> (πclientNo, propertyNo, comment (Viewing))</pre>
 
 #### Natural Join
-```SQL
-πclientNo, fName, lName(Client) ⋈ (πclientNo, propertyNo, comment (Viewing)
-```
+
+_List the names and comments of all clients who have viewed a property for rent._
+
+<pre>πclientNo, fName, lName<sup>(Client)</sup>⋈ (πclientNo, propertyNo, comment<sup>(Viewing)</sup>)</pre>
+
+#### Outer Join
+
+_Produce a status report on property viewings._
+
+<pre>πpropertyNo, street, city<sup>(PropertyForRent)</sup>) ⋊ Viewing</pre>
+
+
