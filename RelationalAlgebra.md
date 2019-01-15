@@ -33,6 +33,8 @@ _List of first name, last name, and salary of all employees who earn above 10000
 
 ### Type Compatability
 
+π product operation used.
+
 #### Union
 
 _List all cities where there is either a branch office or a property for rent._
