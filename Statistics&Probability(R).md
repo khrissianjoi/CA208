@@ -80,3 +80,23 @@ Elements4 = {1,2,3,4}
 
 R &rarr; choose(4,3)
 </pre>
+
+### Bayes Theorem
+
+P(A|B)P(B)=P(B | A)P(A)
+
+Example:
+
+A = the man is a millionaire
+B = the man dries a Porsche
+
+P(A) = 0.01
+P(B|A) = 0.3
+P(B) = 0.004
+
+_Suppose you saw a man driving a Porsche. What is the probability that he is a millionaire?_
+<pre>
+P(A|B) = P(B|A)P(A) / P(B) = (0.3 x 0.01) / 0.004 = 0.75
+</pre>
+
+Probability of a man that drives a Porche is a millionair is 0.75
