@@ -18,3 +18,17 @@ returns the combination <sup>n</sup>C<sub>r</sub>
 > choose(4,3)
 [1] 4
 ```
+
+### runif(x)
+
+generates x numbers between 0-1
+```
+for (i in c(1:1000))
+{
+	curr = runif(1) 
+	if(curr > 0.98)
+	{
+		print(curr)
+	}
+}
+```
