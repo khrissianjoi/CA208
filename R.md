@@ -22,7 +22,11 @@ returns the combination <sup>n</sup>C<sub>r</sub>
 ### runif(x)
 
 generates x numbers between 0-1
-```
+```R
+> r = runif(5)
+[1] 0.1574274 0.4831302 0.0916280 0.8297348 0.1899056
+
+
 for (i in c(1:1000))
 {
 	curr = runif(1) 
@@ -32,3 +36,4 @@ for (i in c(1:1000))
 	}
 }
 ```
+
