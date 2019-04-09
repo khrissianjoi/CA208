@@ -91,6 +91,8 @@ P(A and B) = P(B|A) x P(A)
 
 P(¬A and B) = P(B|¬A) x P(¬H)
 
+P(¬A|¬B) = 1 - P(A|¬B)
+
 conditional probability
 
 P(B|A) = P(A and B) / P(A) 
