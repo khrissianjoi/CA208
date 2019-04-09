@@ -85,12 +85,21 @@ R &rarr; choose(4,3)
 ```
 P(A or B) = P(A) + P(B) - P(A and B)
 
-_conditional probability_
+P(A) = P(A and B) + P(A and ¬B)
+
+P(A and B) = P(B|A) x P(A)
+
+P(¬A and B) = P(B|¬A) x P(¬H)
+
+conditional probability
 
 P(B|A) = P(A and B) / P(A) 
+
 P(A and B) = P(A) x P(B|A)
 
+
 a and b are mutually exclusive
+
 P(A|B) = P(B)
 ```
 
