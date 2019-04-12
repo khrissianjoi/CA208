@@ -110,6 +110,16 @@ P(A|B) = P(B)
 
 P(A|B) x P(B) = P(B|A) x P(A)
 
+#### Independant
+```
+P(P1 and P2|H) = P(P1|H) x P(P2|H)
+
+P(P1 and P2) = P(P1 and P2|H) x P(H) + P(P1 and P2|¬H)P(¬H)
+=
+P(P1 and P2) = P(P1|H) x P(P2|H) x P(H) + P(P1|¬H) x P(P2|¬H) x P(¬H)
+
+
+```
 Example:
 
 A = the man is a millionaire
