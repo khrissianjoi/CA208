@@ -135,3 +135,17 @@ P(A|B) = P(B|A) x P(A) / P(B) = (0.3 x 0.01) / 0.004 = 0.75
 </pre>
 
 Probability of a man that drives a Porche is a millionair is 0.75
+
+### Hypergeometric distribution
+
+P(X = x) = (-----)
+
+M = successes
+L = failures
+N = total (M+L)
+n = elements selected
+
+_Draw 6 cards from a deck without replacement. What is the probability of getting two hearts?_
+```
+
+```
