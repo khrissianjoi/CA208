@@ -119,7 +119,7 @@ _Five terminals on an on-line computer system are attached to a communication li
 ```
 _sample :n = 5, p = .95_
 ### pbinom(x, n, prob)
-```
+```R
 #P(X ≤ 3):
 > pbinom(3, 5, .95)
 [1] 0.0225925
