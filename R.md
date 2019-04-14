@@ -71,9 +71,18 @@ Cumulative Probability Function, the probability that the random variable will b
 
 If there are twelve cars crossing a bridge per minute on average, find the probability of having seventeen or more cars crossing the bridge in a particular minute.
 
-```
+```R
 > ppois(16, 12, FALSE)
 [1] 0.101291
 > ppois(16, 12) #probability of having 16 or less cars
 [1] 0.89871
+```
+
+### qpois(k, λ)
+
+Consider a computer system with Poisson job-arrival stream at an average of 2 per minute. Determine the probability that in any one-minute interval there will be, maximum arrivals with at least 90% certainty.
+
+```R
+> qpois(.9,2)
+[1] 4
 ```
