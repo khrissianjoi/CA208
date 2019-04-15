@@ -63,7 +63,8 @@ returns the combination <sup>n</sup>C<sub>r</sub>
 [1] 4
 ```
 
-## pnorm(x, mean, sd)
+## Probability Density Funtion
+### pnorm(x, mean, sd)
 ```R
 > pnorm(45, 45, 4) #P(X < 45)
 [1] 0.5
