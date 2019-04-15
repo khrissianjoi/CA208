@@ -1,3 +1,16 @@
+## mean(x, na.rm)
+```R
+> imdb_rating = file$imdb_rating
+> mean(imdb_rating,na.rm = TRUE)
+[1] 7.386097
+```
+
+## sd(x, na.rm)
+```R
+> imdb_rating = file$imdb_rating
+> sd(imdb_rating,na.rm = TRUE)
+[1] 0.7324394
+```
 ## sample(x, size, replace, prob)
 takes a sample of the specified size from the elements of x using either with or without replacement.
 
@@ -49,9 +62,20 @@ returns the combination <sup>n</sup>C<sub>r</sub>
 > choose(4,3)
 [1] 4
 ```
-## dhyper(x, M, L, n)
 
-Hypergeometric distribution
+## pnorm(x, mean, sd)
+```R
+> pnorm(45, 45, 4) #P(X < 45)
+[1] 0.5
+> 1- pnorm(45, 45, 4) #P(X > 45)
+[1] 0.5
+>  pnorm(50, 45, 4)-pnorm(40, 45,4 ) #P(40 < X < 50)
+[1]  0.7887005
+```
+## Hypergeometric Distribution
+without replacement
+### dhyper(x, M, L, n)
+
 
 Draw 6 cards from a deck without replacement. What is the probability of getting two hearts?
 M = successes
@@ -104,6 +128,7 @@ _a production line which has a 20% defective rate, what is the minimum number of
 #has a probabilty of .75.
 ```
 ## Binomial Distribution
+with replacement
 n = no of trials
 p = probability of success
 q = 1 − p = probability of failure
