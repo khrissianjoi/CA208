@@ -14,7 +14,11 @@
 
 ## var(x)
 ```R
-
+> x <- 0:5
+> x
+[1] 0 1 2 3 4 5
+> var(x)
+[1] 3.5
 ```
 ## sample(x, size, replace, prob)
 takes a sample of the specified size from the elements of x using either with or without replacement.
