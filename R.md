@@ -148,6 +148,7 @@ _a production line which has a 20% defective rate, what is the minimum number of
 ```
 ## Binomial Distribution
 with replacement
+
 n = no of trials
 p = probability of success
 q = 1 − p = probability of failure
