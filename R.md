@@ -11,6 +11,11 @@
 > sd(imdb_rating,na.rm = TRUE)
 [1] 0.7324394
 ```
+
+## var(x)
+```R
+
+```
 ## sample(x, size, replace, prob)
 takes a sample of the specified size from the elements of x using either with or without replacement.
 
@@ -23,7 +28,16 @@ takes a sample of the specified size from the elements of x using either with or
 > sample(x,2,replace =TRUE)
 [1] 1 4
 ```
+## rep(x, times = 1)
+```R
+> sample(c(rep(1,5),rep(0,15)),5, replace=T)
+[1] 0 0 0 1 1
+> sample(c(rep(1,5),rep(0,15)),5, replace=T)
+[1] 0 0 0 0 0
+> sample(c(rep(1,5),rep(0,15)),5, replace=T)
+[1] 0 0 0 1 0
 
+```
 ## runif(x)
 
 generates x numbers between 0-1
