@@ -26,6 +26,68 @@ Tests are repeated to ensure that defect corrections have been effective.
 Debugging is done first to ensure that the component or system is at a level to enable rigorous testing.
 Debugging can be used to understand the root cause of observed failures.
 
+## Dynamic and Static Testing
+
+<b>Static tests</b> are tests that do not involve executing software (prevention)
+examples:
+ - Requirements
+ - Designs
+ - Code
+ - Test plans
+ 
+ <b>Dynamic tests</b> is completed by walking the real application with valid entries to verify the expected results (cure).
+ examples:
+ - Integration or Componenet Integration testing
+ - Program (unit)
+ - System testing
+ - User acceptance testing
+## Fundamental Test Process
+
+### The Test Process
+- <b>Test planning</b> : determines how the test strategy will be implemented
+- <b>Test control</b> : measuring and analyzing results monitoring and documenting progress, test coverage and exit criteria
+- <b>Test analysis</b> : tangible test conditions and test designs are derived from the baseline documents
+- <b>Test design</b> : Designing the test environment set-up and identifying any required infrastructure and tools.
+- <b>Test implementation (preperation)</b> : test conditions are transformed into test cases and testware, and the environment is set up from the test cases
+- <b>Test exectuion and recording</b> : Test cases are run either manually or by using test execution tools, according to the planned sequence
+- <b>Evaluation exit criteria and reporting</b> : test execution is assessed against the defined objectives
+- <b>Test closure activities</b> : provides stakeholders the evidence theyneed to make a decision (to release, to postpone, or in extreme circumstances, to cancel)
+
+## Expected Results
+
+Specifications, requirements (baselines) etc. define what the software is required to do.
+A baseline document describes how we require the system to behave (User requirement, design, spec. etc.)
+Without requirements, developers cannot build, testers cannot test.
+Programmers need them to write the code.
+Testers need them to identify the things that need testing and compare test results with the requirments.
+
+If we don't define expected result before we execute the test:
+- a plausible, but erroneous, result may be interpreted as the correct result
+- there may be a subconscious desire to see the software pass the test
+
+## Continuous Integration
+
+<b>Continuous Integration</b> a development practice that requires developers to integrate code into a shared repository several times a day.
+Each check-in is then verified by an automated build, allowing teams to detectproblems early.
+By integrating regularly, you can detect errors quickly, and locate them more easily.
+Automated builds are inherently associated with unit testing.
+
+![CI](https://user-images.githubusercontent.com/34526517/56735671-06ca0380-675e-11e9-92bd-cc353945e90d.png)
+
+## Functional and Non-functional system
+
+<b>Functional system testing</b>
+concerned with:
+- _functional requirements_
+- fault detection a major objective
+- _'what_ the system must do"
+
+<b>Non-functional system testing</b>
+- concerned with _non-functional_ or technical requirements.
+- "_how_ the system does what it does."
+
+
+
 ## Principles of Software Testing:
 
 ### Principle 1 - Testing shows the presence of defects:
@@ -46,3 +108,25 @@ If the same tests are repeated again and again, eventually, these test cases wil
 The testing we do must take account of the context
 
 ### Principle 7 - Absence-of-errors fallacy
+
+## Configuration Management
+
+<b>Configuration management</b> may involve insuring that:
+All items of testware are identified, version controllege, tracked for changes, related to each other and related to development items so that all identified documents and software items are referenced unambiguously in test documentation.
+
+The configuration managment procedures and ingrastructure (tools) should be chosen, documented and implemnted.
+
+### Symptoms of poor configuration management
+- Bugs that were fixed suddenly reappear
+- Wrong functionality shipped
+- Wrong code tested
+- Undocumented features suddenly appear
+- Tested features suddenly disappear
+- Can't trace which customer has which version of code
+
+### Answers Congfiguration Management provies
+- What is our current software configuration?
+- What is its status?
+- How do we control changes to our configuration?
+- What changes have been made to our software?
+- Does anyone else's changes affect our software?
