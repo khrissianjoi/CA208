@@ -16,6 +16,15 @@ A failure occurs when software does the _'wrong'_ thing.
 Failurs sometimes will be called a _'problem'_, _'incident'_, _'issue'_.
 example: products that are _too hard_ to use or _too slow_ (when a user experiences a problem)
 
+<b>Exit Criteria</b> is to define when to stop testing, such as at the end of a test level or when a set of tests has a specific goal.
+Evaluating exit criteria is the activity where test execution is assessed against the defined objectives.
+Exit criteria should be objective and measurable
+- all tests run successfully
+- all faults found are fixed and re-tested
+- coverage target (set and) met
+- time (or cost) limit exceeded
+If exit criteria are met, the software/system can be released to the next test phase or production.
+
 A developer makes an ERROR → ... and injects a DEFECT into the software → ... and the fault causes software to FAIL.
 
 <b>Software Testing</b> is the systematic exploration of a component/system with the main aim of finding and reporting defects.
@@ -41,10 +50,16 @@ examples:
  - Program (unit)
  - System testing
  - User acceptance testing
+ 
 ## Fundamental Test Process
 
 ### The Test Process
 - <b>Test planning</b> : determines how the test strategy will be implemented
+- Test planning identifies, at a high level, the scope, approach and dependencies:
+the software component(s) to be tested.
+additional infrastructure to test the component.
+the approach to test design.
+the test completion criteria.
 - <b>Test control</b> : measuring and analyzing results monitoring and documenting progress, test coverage and exit criteria
 - <b>Test analysis</b> : tangible test conditions and test designs are derived from the baseline documents
 - <b>Test design</b> : Designing the test environment set-up and identifying any required infrastructure and tools.
@@ -81,12 +96,12 @@ concerned with:
 - _functional requirements_
 - fault detection a major objective
 - _'what_ the system must do"
+examples: unit testing, user acceptance, integration testing, unit testing. 
 
 <b>Non-functional system testing</b>
 - concerned with _non-functional_ or technical requirements.
 - "_how_ the system does what it does."
-
-
+examples: performance testing, stress testing, probability testing, compliance testing.
 
 ## Principles of Software Testing:
 
