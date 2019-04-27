@@ -1,1 +1,1 @@
-Notes for college.
+Module notes
