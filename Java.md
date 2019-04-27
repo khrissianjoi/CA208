@@ -15,6 +15,7 @@ String word = Character.toString(letter)
 String word =  'hello';
 int word_length = word.length();
 
+#length of list
 int[] list_nums = [1,2,3,4,5];
 int nums_length = list_nums.length(); 
 ```
