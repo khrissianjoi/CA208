@@ -16,6 +16,8 @@ A failure occurs when software does the _'wrong'_ thing.
 Failurs sometimes will be called a _'problem'_, _'incident'_, _'issue'_.
 example: products that are _too hard_ to use or _too slow_ (when a user experiences a problem)
 
+A developer makes an ERROR → ... and injects a DEFECT into the software → ... and the fault causes software to FAIL.
+
 <b>Exit Criteria</b> is to define when to stop testing, such as at the end of a test level or when a set of tests has a specific goal.
 Evaluating exit criteria is the activity where test execution is assessed against the defined objectives.
 Exit criteria should be objective and measurable
@@ -24,8 +26,6 @@ Exit criteria should be objective and measurable
 - coverage target (set and) met
 - time (or cost) limit exceeded
 If exit criteria are met, the software/system can be released to the next test phase or production.
-
-A developer makes an ERROR → ... and injects a DEFECT into the software → ... and the fault causes software to FAIL.
 
 <b>Software Testing</b> is the systematic exploration of a component/system with the main aim of finding and reporting defects.
 Testing rigorously examines the component/system behaviour and reports defects found.
@@ -36,6 +36,23 @@ Testing is done by tester.
 Debugging is done first to ensure that the component or system is at a level to enable rigorous testing.
 Debugging can be used to understand the root cause of observed failures.
 Debugging is done by programmer or developer.
+
+<b>Black-Box</b>
+Testing method where the internal structure/design of the item being tested in NOT KNOWN to the tester.
+Test is carried out by testers.
+Programming Knowledge is not required to carry out Black-Box Testing
+- Fucntional Testing
+- Non-Functional Testing
+- Regression Testing
+
+<b>White-Box</b>
+Testing method where the internal structure/ design of the item being tested is KNOWN to the tester.
+Test in typically carried out by software developers.
+Programming Knowledge is required to carry out White-Box Testing.
+- Path Testing
+- Loop Testing
+- Condition Testing
+
 
 ## Dynamic and Static Testing
 
@@ -68,12 +85,13 @@ the test completion criteria.
 - _<b>Test analysis</b>_ : tangible test conditions and test designs are derived from the baseline documents
 
 - <b>Test design</b> : Designing the test environment set-up and identifying any required infrastructure and tools.
-<b>Black-Box</b>
-<b>White-BOx</b>
 
 - <b>Test implementation (preperation)</b> : test conditions are transformed into test cases and testware, and the environment is set up from the test cases
+
 - <b>Test exectuion and recording</b> : Test cases are run either manually or by using test execution tools, according to the planned sequence
+
 - <b>Evaluation exit criteria and reporting</b> : test execution is assessed against the defined objectives
+
 - <b>Test closure activities</b> : provides stakeholders the evidence theyneed to make a decision (to release, to postpone, or in extreme circumstances, to cancel)
 
 ## Expected Results
