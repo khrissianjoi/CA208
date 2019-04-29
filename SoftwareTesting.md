@@ -30,10 +30,12 @@ A developer makes an ERROR → ... and injects a DEFECT into the software → ..
 <b>Software Testing</b> is the systematic exploration of a component/system with the main aim of finding and reporting defects.
 Testing rigorously examines the component/system behaviour and reports defects found.
 Tests are repeated to ensure that defect corrections have been effective.
+Testing is done by tester.
 
 <b>Debugging</b> A process undertaken by developers to identify the cause of defects in code and undertake corrections.
 Debugging is done first to ensure that the component or system is at a level to enable rigorous testing.
 Debugging can be used to understand the root cause of observed failures.
+Debugging is done by programmer or developer.
 
 ## Dynamic and Static Testing
 
