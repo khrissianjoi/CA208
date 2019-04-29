@@ -62,9 +62,15 @@ the software component(s) to be tested.
 additional infrastructure to test the component.
 the approach to test design.
 the test completion criteria.
+
 - <b>Test control</b> : measuring and analyzing results monitoring and documenting progress, test coverage and exit criteria
-- <b>Test analysis</b> : tangible test conditions and test designs are derived from the baseline documents
+
+- _<b>Test analysis</b>_ : tangible test conditions and test designs are derived from the baseline documents
+
 - <b>Test design</b> : Designing the test environment set-up and identifying any required infrastructure and tools.
+<b>Black-Box</b>
+<b>White-BOx</b>
+
 - <b>Test implementation (preperation)</b> : test conditions are transformed into test cases and testware, and the environment is set up from the test cases
 - <b>Test exectuion and recording</b> : Test cases are run either manually or by using test execution tools, according to the planned sequence
 - <b>Evaluation exit criteria and reporting</b> : test execution is assessed against the defined objectives
