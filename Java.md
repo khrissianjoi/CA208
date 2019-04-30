@@ -17,7 +17,22 @@ int word_length = word.length();
 
 #length of list
 int[] list_nums = [1,2,3,4,5];
-int nums_length = list_nums.length(); 
+int nums_length = list_nums.length; 
+```
+<b>Contains</b>
+```Java
+String word = 'hello';
+boolean answer = word.contains('he');
+```
+<b>indexOf</b>
+```Java
+String word = 'hello';
+int letter = word.indexOf('h'); #letter = 0
+```
+<b>Substring</b>
+```Java
+String word = 'hello there';
+word = word.substring(0,6); #word = 'hello'
 ```
 ## Refactoring
 <b>"Improving the design after it has been written."</b>
