@@ -101,6 +101,18 @@ the test completion criteria.
 
 - <b>Test closure activities</b> : provides stakeholders the evidence theyneed to make a decision (to release, to postpone, or in extreme circumstances, to cancel)
 
+## Test level
+
+### Integration Test
+When components are integrated into a system, we may need to perform dedicated integration testing.
+Integration testing is based on the build and integration sequence
+Strategies for coding and integration:
+- bottom up, top down, "big bang"
+- appropriate in different situations
+
+STUBS for top-down
+DRIVER for bottom-up
+
 ## Expected Results
 
 Specifications, requirements (baselines) etc. define what the software is required to do.
