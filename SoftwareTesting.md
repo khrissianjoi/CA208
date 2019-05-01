@@ -63,12 +63,19 @@ examples:
  - Code
  - Test plans
  
+![Screenshot from 2019-05-01 23-04-46](https://user-images.githubusercontent.com/34526517/57045463-90e60080-6c65-11e9-8916-5ddfe13081be.png)
+
+
+ 
  <b>Dynamic tests</b> is completed by walking the real application with valid entries to verify the expected results (cure).
  examples:
  - Integration or Componenet Integration testing
  - Program (unit)
  - System testing
  - User acceptance testing
+ 
+ ![Screenshot from 2019-05-01 23-02-28](https://user-images.githubusercontent.com/34526517/57045381-4ebcbf00-6c65-11e9-948f-ac8d249e980a.png)
+
  
 ## Fundamental Test Process
 
