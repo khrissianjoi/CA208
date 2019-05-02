@@ -75,7 +75,12 @@ examples:
  
  ![Screenshot from 2019-05-01 23-02-28](https://user-images.githubusercontent.com/34526517/57045381-4ebcbf00-6c65-11e9-948f-ac8d249e980a.png)
 
- 
+## Exploratory Testing (ET)
+Where the documents that form the basis for test design (e.g. requirements
+specification(s)) are of very low quality or obsolete or do not exist at
+all.
+Approach is mainly based on the intuition and experience of the tester
+
 ## Fundamental Test Process
 
 ### The Test Process
