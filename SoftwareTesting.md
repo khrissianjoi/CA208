@@ -184,7 +184,7 @@ The configuration managment procedures and ingrastructure (tools) should be chos
 - Tested features suddenly disappear
 - Can't trace which customer has which version of code
 
-### Answers Congfiguration Management provies
+### Answers Congfiguration Management provides
 - What is our current software configuration?
 - What is its status?
 - How do we control changes to our configuration?
