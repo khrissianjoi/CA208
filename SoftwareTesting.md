@@ -65,7 +65,6 @@ examples:
  
 ![Screenshot from 2019-05-01 23-04-46](https://user-images.githubusercontent.com/34526517/57045463-90e60080-6c65-11e9-8916-5ddfe13081be.png)
 
-
  
  <b>Dynamic tests</b> is completed by walking the real application with valid entries to verify the expected results (cure).
  examples:
