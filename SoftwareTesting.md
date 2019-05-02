@@ -103,6 +103,12 @@ the test completion criteria.
 
 ## Test level
 
+### Component Test
+(component can be a single unit or a collection of units)
+- Performed on components in isolation.
+- Stubs, drivers and simulators may be used.
+- May include testing of some non-functional characteristics.
+
 ### Integration Test
 When components are integrated into a system, we may need to perform dedicated integration testing.
 Integration testing is based on the build and integration sequence
@@ -110,8 +116,54 @@ Strategies for coding and integration:
 - bottom up, top down, "big bang"
 - appropriate in different situations
 
-STUBS for top-down
-DRIVER for bottom-up
+STUBS for top-down (temporary substitutes for components that havent been written yet.) simulate the real code
+
+DRIVER for bottom-up (ttemporary substitutes for components that havent been written yet.) components that will eventually use them.
+
+### Component Integration Testing
+Tests designed to explore direct and indirect interfaces and consistency between components.
+
+### Interface testing/defects
+(Interface are statements which transfer control between programs)
+- White-box oriented
+
+### System and Acceptance Testing
+focus on the testing of complete systems.
+- has multiple drivers (bottom-up).
+
+### System Testing
+Systematic demonstration that all feature are available and work as specified.
+- Coverage of all documented features (not code), conditions, system states is
+the imperative
+- Tests designed around baseline document(s)
+- Functional and non-functional requirements are covered.
+### Functional and Non-functional system
+
+<b>Functional system testing</b>
+concerned with:
+- _functional requirements_
+- fault detection a major objective
+- _'what_ the system must do"
+examples: unit testing, user acceptance, integration testing, unit testing. 
+
+<b>Non-functional system testing</b>
+- concerned with _non-functional_ or technical requirements.
+- "_how_ the system does what it does."
+examples: performance testing, stress testing, probability testing, compliance testing.
+
+### Acceptance User Testing (UAT)
+Acceptance tests:
+- usually a smaller-scale test than system test
+- can be a selected sub-set of system tests (perhaps in a different environment)
+
+- Done from an end user's viewpoint.
+- Testing based on how user's use the system.
+
+### Requirements-based Testing
+
+### Alpha and Beta Testing
+Alpha testing normally takes place on the supplier site
+Beta testing usually conducted by users on their site.
 
 ## Expected Results
 
@@ -125,6 +177,22 @@ If we don't define expected result before we execute the test:
 - a plausible, but erroneous, result may be interpreted as the correct result
 - there may be a subconscious desire to see the software pass the test
 
+## Coverage
+
+### Statement Coverage
+- most basic
+- every statement executed atleast once.
+Statement Coverage = (statements executed / total statements) * 100
+
+### Branch Coverage
+- more refined
+- every outcome of every decision executed atleast once.
+Branch Coverage = (branch outcomes executed / total branch outcomes) * 100
+
+### Path Coverage
+- most difficult 
+- every outcome from all possible statement/decisions in all possible combintations executed atleast once. 
+Path Coverage = (paths executed / total number of paths) * 100
 ## Continuous Integration
 
 <b>Continuous Integration</b> a development practice that requires developers to integrate code into a shared repository several times a day.
@@ -134,19 +202,7 @@ Automated builds are inherently associated with unit testing.
 
 ![CI](https://user-images.githubusercontent.com/34526517/56735671-06ca0380-675e-11e9-92bd-cc353945e90d.png)
 
-## Functional and Non-functional system
 
-<b>Functional system testing</b>
-concerned with:
-- _functional requirements_
-- fault detection a major objective
-- _'what_ the system must do"
-examples: unit testing, user acceptance, integration testing, unit testing. 
-
-<b>Non-functional system testing</b>
-- concerned with _non-functional_ or technical requirements.
-- "_how_ the system does what it does."
-examples: performance testing, stress testing, probability testing, compliance testing.
 
 ## Principles of Software Testing:
 
