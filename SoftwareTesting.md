@@ -75,6 +75,28 @@ examples:
  
  ![Screenshot from 2019-05-01 23-02-28](https://user-images.githubusercontent.com/34526517/57045381-4ebcbf00-6c65-11e9-948f-ac8d249e980a.png)
 
+## Test Design Techniques
+
+Identify test conditions and test cases.
+This enables effective yet economic/practical testing.
+- Exhaustive testing of all program paths is impractical
+- Exhaustive testing of all inputs is also impractical
+- Even if we could, most tests would represent duplicates
+
+### Equivalence Partitioning
+Process of methodically reducing the large set of possible test cases into a small, but effective set of test cases.
+Can be applied to all levels of testing (black box)
+<b>STEPS:</b>
+- The set of test condition is divided into groups that can be considered the same (system will treat them equivalently).
+- Choose one condition from the groups to test (assuming all the conditions in the partition will work the same).
+- Testing a single value from an equivalence partition is considered _representative_ of the complete partition.
+
+### Boundary Value Analysis
+(black box design technique)
+Used to find the errors at boundaries of input domain rather than finding those errors in the center of input.
+Testing between extreme ends or boundaries between partitions of the input values.
+
+
 ## Exploratory Testing (ET)
 Where the documents that form the basis for test design (e.g. requirements
 specification(s)) are of very low quality or obsolete or do not exist at
