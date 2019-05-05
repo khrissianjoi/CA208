@@ -77,6 +77,14 @@ examples:
  
  ![Screenshot from 2019-05-01 23-02-28](https://user-images.githubusercontent.com/34526517/57045381-4ebcbf00-6c65-11e9-948f-ac8d249e980a.png)
 
+## Psychology of Testing
+
+- Testers are unbiased.
+- Tries to prove the solution does not work (Developers prove the solution does work).
+- Testers do not make assumptions.
+
+Problems communicating with developers may occur, particularly if testers are seen only as messengers of unwanted news about defects
+
 ## Test Design Techniques
 
 Identify test conditions and test cases.
