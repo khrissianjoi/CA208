@@ -70,10 +70,10 @@ examples:
  
  <b>Dynamic tests</b> is completed by walking the real application with valid entries to verify the expected results (cure).
  examples:
- - Integration or Componenet Integration testing
- - Program (unit)
- - System testing
- - User acceptance testing
+ - Integration or Componenet Integration testing : if components work together
+ - Unit testing : addresses quality of each (individual) units.
+ - System testing : if system delivers desired function
+ - User, acceptance testing : if the system is acceptable to the users, carried out by user or designated user representative.
  
  ![Screenshot from 2019-05-01 23-02-28](https://user-images.githubusercontent.com/34526517/57045381-4ebcbf00-6c65-11e9-948f-ac8d249e980a.png)
 
