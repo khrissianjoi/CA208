@@ -232,6 +232,8 @@ If we don't define expected result before we execute the test:
 
 ## Coverage
 
+a measure used to describe the degree to which the source code of a program is executed. Whether our test cases are actually covering the application code and how much code is exercised when we run those test cases.
+
 ### Statement Coverage
 - most basic
 - every statement executed atleast once.
