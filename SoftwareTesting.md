@@ -106,8 +106,7 @@ Approach is mainly based on the intuition and experience of the tester
 ## Fundamental Test Process
 
 ### The Test Process
-- <b>Test planning</b> : determines how the test strategy will be implemented
-- Test planning identifies, at a high level, the scope, approach and dependencies:
+- <b>Test planning</b> : determines how the test strategy will be implementedTest planning identifies, at a high level, the scope, approach and dependencies:
 the software component(s) to be tested.
 additional infrastructure to test the component.
 the approach to test design.
@@ -126,6 +125,20 @@ the test completion criteria.
 - <b>Evaluation exit criteria and reporting</b> : test execution is assessed against the defined objectives
 
 - <b>Test closure activities</b> : provides stakeholders the evidence theyneed to make a decision (to release, to postpone, or in extreme circumstances, to cancel)
+
+## Software Development Models
+
+### Continuous Software Engineering
+
+<b>Software Process</b> defines the way to produce software.
+
+<b>Software Life-Cycle Model</b>defines how different phases of the life cycle are managed.
+
+<b>Software Development Life Cycle</b>
+
+
+<b>Tooling</b>
+![Screenshot from 2019-05-05 01-40-27](https://user-images.githubusercontent.com/34526517/57186420-d5c49e00-6ed6-11e9-98be-1feb39e5d3ae.png)
 
 ## Test level
 
