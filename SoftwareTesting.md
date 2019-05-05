@@ -251,6 +251,25 @@ The testing we do must take account of the context
 
 ### Principle 7 - Absence-of-errors fallacy
 
+## Defect Severity & Priority
+
+### Defect Severity
+The extent to which the defect can affect/harm the software.
+
+- Critical : Causes termination of the system and extensive corruption of the data. There is no acceptable alternative method to achieve the required results
+- Major :  Causes termination of the system and extensive corruption of the data. The failed function is unusable but there exists an acceptable alternative method to achieve the required results
+- Moderate : Does not result in the termination, but causes the system to produce incorrect, incomplete or inconsistent.
+- Minor : Does not terminate the system and causes the system to produce incorrectly or inconsistently but the desired results can be obtained by working around the defect.
+- Cosmetic : The defect that is related to the enhancement of the system where the changes
+are related to the look and feel of the application.
+
+### Defect Priority
+Defines he order in which the defects should be solved.
+
+- Low : a bother that should be repaired, but can be deferred until more serious defects are fixed (not priority).
+- Medium : should be fixed in the normal course of development activities.
+- High : should be fixed immediately as it is severely affecting the product/application. The system cannot be used unless that defect has been solved.
+
 ## Configuration Management
 
 <b>Configuration management</b> may involve insuring that:
