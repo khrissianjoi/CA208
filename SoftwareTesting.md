@@ -27,6 +27,8 @@ Exit criteria should be objective and measurable
 - time (or cost) limit exceeded
 If exit criteria are met, the software/system can be released to the next test phase or production.
 
+<b>Software Test</b> is controlled exercise where an object is under test and has clear definitions of input, expected output and environment
+
 <b>Software Testing</b> is the systematic exploration of a component/system with the main aim of finding and reporting defects.
 Testing rigorously examines the component/system behaviour and reports defects found.
 Tests are repeated to ensure that defect corrections have been effective.
