@@ -136,9 +136,21 @@ the test completion criteria.
 
 <b>Software Development Life Cycle</b>
 
+![Screenshot from 2019-05-05 02-07-11](https://user-images.githubusercontent.com/34526517/57186620-87b19980-6eda-11e9-865f-465ca6fcd07d.png)
 
-<b>Tooling</b>
-![Screenshot from 2019-05-05 01-40-27](https://user-images.githubusercontent.com/34526517/57186420-d5c49e00-6ed6-11e9-98be-1feb39e5d3ae.png)
+### Life Cycle Models
+
+<b>Build and Fix Model</b>
+<b>Waterfall model</b>
+<b>Iterative Development Model</b>
+
+### Tooling
+<b>Development:</b> HAPI
+<b>Repository:</b> GitHub
+<b>Build:</b> Jenkins
+<b>Test:</b> Tab
+<b>Infrastructure:</b> Consul
+<b>Deployment:</b> Kubernetes
 
 ## Test level
 
