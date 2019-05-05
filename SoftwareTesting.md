@@ -114,7 +114,7 @@ the test completion criteria.
 
 - <b>Test control</b> : measuring and analyzing results monitoring and documenting progress, test coverage and exit criteria
 
-- _<b>Test analysis</b>_ : tangible test conditions and test designs are derived from the baseline documents
+- <b>Test analysis</b> : tangible test conditions and test designs are derived from the baseline documents
 
 - <b>Test design</b> : Designing the test environment set-up and identifying any required infrastructure and tools.
 
@@ -140,17 +140,17 @@ the test completion criteria.
 
 ### Life Cycle Models
 
-<b>Build and Fix Model</b>
-<b>Waterfall model</b>
-<b>Iterative Development Model</b>
+- <b>Build and Fix Model</b>
+- <b>Waterfall model</b>
+- <b>Iterative Development Model</b>
 
 ### Tooling
-<b>Development:</b> HAPI
-<b>Repository:</b> GitHub
-<b>Build:</b> Jenkins
-<b>Test:</b> Tab
-<b>Infrastructure:</b> Consul
-<b>Deployment:</b> Kubernetes
+- <b>Development:</b> HAPI
+- <b>Repository:</b> GitHub
+- <b>Build:</b> Jenkins
+- <b>Test:</b> Tab
+- <b>Infrastructure:</b> Consul
+- <b>Deployment:</b> Kubernetes
 
 ## Test level
 
