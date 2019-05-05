@@ -143,8 +143,8 @@ the test completion criteria.
 ### Life Cycle Models
 
 - <b>Build and Fix Model</b>
-- <b>Waterfall model</b>
-- <b>Iterative Development Model</b>
+- <b>Waterfall model</b> : attemps to solve big problems in one large project
+- <b>Iterative Development Model</b> : attemps to solve big problems in a number of smaller steps.
 
 ### Tooling
 - <b>Development:</b> HAPI
@@ -197,11 +197,13 @@ concerned with:
 - _functional requirements_
 - fault detection a major objective
 - _'what_ the system must do"
+- not concerned about the source code of the application
 examples: unit testing, user acceptance, integration testing, unit testing. 
 
 <b>Non-functional system testing</b>
 - concerned with _non-functional_ or technical requirements.
 - "_how_ the system does what it does."
+- explicitly designed to test the readiness of a system 
 examples: performance testing, stress testing, probability testing, compliance testing.
 
 ### Acceptance User Testing (UAT)
