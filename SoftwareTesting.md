@@ -33,6 +33,11 @@ If exit criteria are met, the software/system can be released to the next test p
 Testing rigorously examines the component/system behaviour and reports defects found.
 Tests are repeated to ensure that defect corrections have been effective.
 Testing is done by tester.
+<b>Objective:</b>
+- indentify defects
+- prevent defects
+- improve quality (gain confidence)
+- confirm that it meets the required requirements (acceptance testing)
 
 <b>Debugging</b> A process undertaken by developers to identify the cause of defects in code and undertake corrections.
 Debugging is done first to ensure that the component or system is at a level to enable rigorous testing.
@@ -57,7 +62,8 @@ Programming Knowledge is required to carry out White-Box Testing.
 
 
 ## Dynamic and Static Testing
-
+- used as a mean for achieving similar objectives and will provide information to improve both the system.
+- reviewing of documents.
 <b>Static tests</b> are tests that do not involve executing software (prevention)
 examples:
  - Requirements
@@ -69,9 +75,10 @@ examples:
 
  
  <b>Dynamic tests</b> is completed by walking the real application with valid entries to verify the expected results (cure).
+ requires the coding stage to be complete.
  examples:
  - Integration or Componenet Integration testing : if components work together
- - Unit testing : addresses quality of each (individual) units.
+ - Unit testing : addresses quality of each (individual) units. Verify that the logic/behaviour of a piece of code is correct.
  - System testing : if system delivers desired function
  - User, acceptance testing : if the system is acceptable to the users, carried out by user or designated user representative.
  
