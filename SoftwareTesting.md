@@ -18,6 +18,19 @@ example: products that are _too hard_ to use or _too slow_ (when a user experien
 
 A developer makes an ERROR → ... and injects a DEFECT into the software → ... and the fault causes software to FAIL.
 
+<b>Data Flow Analysis</b> concered with how data is used on different paths through code.
+
+<b>states of data:</b>
+- Undefined (u) The data has no defined value.
+- Defined (d) The data is assigned a value.
+- Referenced (r) The data is used.
+
+It cannot detect errors, but can identify anomolies.
+ur-anomaly - An undefined data item is read on a program path.
+du-anomaly - A data item that has been assigned a value becomes undefined
+without being used.
+dd-anomaly - A data item that has been assigned a value is assigned another value without being used in the meantime
+
 <b>Exit Criteria</b> is to define when to stop testing, such as at the end of a test level or when a set of tests has a specific goal.
 Evaluating exit criteria is the activity where test execution is assessed against the defined objectives.
 Exit criteria should be objective and measurable
@@ -56,7 +69,7 @@ Programming Knowledge is not required to carry out Black-Box Testing
 Testing method where the internal structure/ design of the item being tested is KNOWN to the tester.
 Test in typically carried out by software developers.
 Programming Knowledge is required to carry out White-Box Testing.
-- Path Testing
+- Path Testing (control flow graph)
 - Loop Testing
 - Condition Testing
 
@@ -64,6 +77,7 @@ Programming Knowledge is required to carry out White-Box Testing.
 ## Dynamic and Static Testing
 - used as a mean for achieving similar objectives and will provide information to improve both the system.
 - reviewing of documents.
+
 <b>Static tests</b> are tests that do not involve executing software (prevention)
 examples:
  - Requirements
@@ -235,13 +249,15 @@ Acceptance tests:
 Alpha testing normally takes place on the supplier site
 Beta testing usually conducted by users on their site.
 
-## Expected Results
+## Baselines, Requirements
+
+### Expected Results
 
 Specifications, requirements (baselines) etc. define what the software is required to do.
 A baseline document describes how we require the system to behave (User requirement, design, spec. etc.)
 Without requirements, developers cannot build, testers cannot test.
 Programmers need them to write the code.
-Testers need them to identify the things that need testing and compare test results with the requirments.
+Testers need them to identify the things that need testing and compare test results with the requirments have a correct output to compare to).
 
 If we don't define expected result before we execute the test:
 - a plausible, but erroneous, result may be interpreted as the correct result
@@ -310,7 +326,7 @@ The extent to which the defect can affect/harm the software.
 are related to the look and feel of the application.
 
 ### Defect Priority
-Defines he order in which the defects should be solved.
+Defines the order in which the defects should be solved.
 
 - Low : a bother that should be repaired, but can be deferred until more serious defects are fixed (not priority).
 - Medium : should be fixed in the normal course of development activities.
