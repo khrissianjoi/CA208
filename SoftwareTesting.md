@@ -246,6 +246,7 @@ Acceptance tests:
 ### Requirements-based Testing
 
 ### Alpha and Beta Testing
+Where supplier wishes to receive feedback from actual or potential customers
 Alpha testing normally takes place on the supplier site
 Beta testing usually conducted by users on their site.
 
