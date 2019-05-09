@@ -27,7 +27,7 @@ The pipeline is a miniature graph of parallel-processing elements (instructions 
 ## Branch
 
 ### "Branch Delay Slot"
-The instruction in the delay slot is _always_ execute, whether the branch is take or not
+The instruction in the delay slot is _always_ executed, whether the branch is taken or not
 
 Reduces stalls.
 
@@ -59,3 +59,49 @@ Improves performance at the cost of some additional complexity.
 Eliminates data hazards involving arithmetic instructions.
 - Forwarding detects hazards by comparing destination register of previous instructions to the source registers of the current instruction.
 - Hazards are avoided by grabbing results from the pipeline registers before they are written abck to the register file.
+
+## Metric
+
+### MTTF  (mean time to failure)
+```
+MTTF = 10^2
+FailureRate = 1//MTTF ; per hour
+```
+### MTTR (mean time to repair)
+
+- hours
+
+### MTBF (mean time between failures)
+```
+MTBF = MTTF + MTTR
+```
+### Availability
+```
+Availability = MTTF / (MTTF + MTTR) ; usually quoted as a percentage
+
+MTTF = 10^5
+MTTR = 165 hours
+Availability = 10^5 / (10^5+168)
+```
+## Code
+
+<b>Compute the sum of even numbers up to the largest even number smaller than or equal to n,
+example : 2 + 4 + 6 + ... n
+R4 contains n (positive integer)
+R2 contains final output</b>
+```
+.text
+
+	daddi r5, r2, 02
+	daddi r4, r0, 10
+  ;daddi r1, r0, 01 odd number addition
+	;dsub r4, r4, r1
+
+loop:
+	dadd r2, r2, r4
+	dsub r3, r4, r5
+	dadd r4, r3, r0
+	bnez r4, loop
+
+halt
+```
