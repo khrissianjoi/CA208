@@ -60,6 +60,15 @@ Eliminates data hazards involving arithmetic instructions.
 - Forwarding detects hazards by comparing destination register of previous instructions to the source registers of the current instruction.
 - Hazards are avoided by grabbing results from the pipeline registers before they are written abck to the register file.
 
+## Speedup
+
+### Amdahl's Law
+```
+p = portion of job affected by enhancement
+s = speedup associated with p
+speedup = 1/((1-p) + (p/s))
+```
+
 ## Metric
 
 ### MTTF  (mean time to failure)
