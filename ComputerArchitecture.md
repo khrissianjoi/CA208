@@ -105,3 +105,27 @@ loop:
 
 halt
 ```
+
+```
+.data
+
+arrayint:
+	.word 01
+	.word 02
+	.word 03
+	.word 04
+	.word 05
+
+.text
+	daddi r5, r0, 48
+	daddi r6, r0, 03
+	ld r4, arrayint(r1) 
+loop:
+	dmul r4, r4, r6
+	sd r4, arrayint(r1)
+	daddi r1, r1, 8
+	bne r5, r1, loop
+	ld r4, arrayint(r1)
+end:
+	halt 
+```
