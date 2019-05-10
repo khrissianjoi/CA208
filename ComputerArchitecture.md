@@ -159,7 +159,7 @@ loop_max:
 	beq r1, r5, finish
 	ld r4, arrayint(r1)
 	slt r2, r4, r6		; (4 < 6 == 0)
-	bne r2, r0, min
+	bne r2, r0, loop_max
 	daddi r1, r1, 8		; while branch happening inc r1
 						; else
 	j loop
