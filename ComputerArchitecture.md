@@ -159,3 +159,28 @@ loop_max:
 finish:
 	halt 
 ```
+<b>Triangle</b>
+```
+.data
+LENGTH:
+	.word 0
+
+TRIANGLE:
+	.word 01
+	.word 02
+	.word 03
+
+.text
+	;daddi r1, r0, 8
+	daddi r5, r0, 32
+	ld r4, TRIANGLE(r1)
+loop:
+	dadd r6, r6, r4
+	beq r5, r1, finish
+	daddi r1, r1, 8
+	j loop
+	ld r4, TRIANGLE(r1)
+finish:
+	sd r6, LENGTH(r0)
+	halt 
+```
