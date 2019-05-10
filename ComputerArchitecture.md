@@ -129,3 +129,33 @@ loop:
 end:
 	halt 
 ```
+<b>MAX</b>
+
+```
+.data
+
+arrayint:
+	.word 56
+	.word 10
+	.word 32
+	.word 00
+	.word 04
+
+.text
+	daddi r5, r0, 48
+	;daddi r6, r0, 00	;current max
+	daddi r7, r0, 01
+	ld r8, arrayint(r1)	;current min
+loop_max:
+	beq r1, r5, finish
+	ld r4, arrayint(r1)
+	slt r2, r4, r6		; (4 < 6 == 0)
+	bne r2, r0, min
+	daddi r1, r1, 8		; while branch happening inc r1
+						; else
+	j loop
+	dadd r6, r4, r0
+
+finish:
+	halt 
+```
