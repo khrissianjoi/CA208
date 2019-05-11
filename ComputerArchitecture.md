@@ -100,19 +100,17 @@ R4 contains n (positive integer)
 R2 contains final output</b>
 ```
 .text
-
-	daddi r5, r2, 02
 	daddi r4, r0, 10
-  ;daddi r1, r0, 01 odd number addition
-	;dsub r4, r4, r1
+	daddi r2, r0, 02
+	daddi r6, r0, 02
 
 loop:
-	dadd r2, r2, r4
-	dsub r3, r4, r5
-	dadd r4, r3, r0
-	bnez r4, loop
-
-halt
+	dadd r8, r8, r6
+	beq r4, r6, finish
+	j loop
+	dadd r6, r6, r2
+finish:
+	halt
 ```
 
 ```
