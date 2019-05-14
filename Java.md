@@ -34,6 +34,17 @@ int letter = word.indexOf('h'); #letter = 0
 String word = 'hello there';
 word = word.substring(0,6); #word = 'hello'
 ```
+
+<b>Map</b>
+ ```
+ Map<String, String> MyMap = new HashMap<String, String>();
+ 
+ String name = in.next();
+ int number = in.next();
+
+ MyMap.put(name,number);
+ 
+ ```
 ## Refactoring
 <b>"Improving the design after it has been written."</b>
 The process of restructuring existing code. Refactoring is intended to improve nonfunctional attributes of the software.
