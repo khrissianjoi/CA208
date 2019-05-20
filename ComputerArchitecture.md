@@ -9,6 +9,7 @@ The pipeline is a miniature graph of parallel-processing elements (instructions 
 <b>Decode (ID):</b>
 - Deconde instruction, generate control signals
 - Read from register file
+- (if ID stage has additional hardware) detect branch/jump instruction, decode the target address, and decide wheter a branch was taken or not (instead of doing that in EX, determine one stage earlier)
 
 <b>Execute (EX):</b>
 - Read ID/EX pipeline register to get values and control bits
