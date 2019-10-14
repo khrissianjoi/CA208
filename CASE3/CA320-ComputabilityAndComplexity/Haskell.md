@@ -7,7 +7,7 @@
 [2,4,6]
 > length [2,4,6,8] -- returns the length of the list
 4
-> null [2,4,6,8] -- returns if list is empty
+> null [2,4,6,8] -- returns boolean, if list is empty
 False
 > reverse [2,4,6,8] -- returns the reverse
 [8,6,4,2]
@@ -15,12 +15,12 @@ False
 [2,4]
 > drop 3 [2,4,6,8]
 [8]
-> maximum [2,8,4,9,6]
+> maximum [2,8,4,9,6] -- returns the maximum element
 9
-> minimum [2,8,4,9,6]
+> minimum [2,8,4,9,6] -- returns the minimum element
 2
-> sum [2,8,4,9,6]
+> sum [2,8,4,9,6] -- returns the sum of all the elements
 29
-> elem 4 [2,8,4,6]
+> elem 4 [2,8,4,6] -- returns boolean, if element in list
 True
 ```
