@@ -1,7 +1,7 @@
 
 ## Haskell List Functions
-```
-> last [2,4,6,8]
+```haskell
+> last [2,4,6,8] 
 8
 > init [2,4,6,8]
 [2,4,6]
