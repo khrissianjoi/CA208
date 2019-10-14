@@ -1,15 +1,15 @@
 
 ## Haskell List Functions
 ```haskell
-> last [2,4,6,8] 
+> last [2,4,6,8] -- returns last element
 8
-> init [2,4,6,8]
+> init [2,4,6,8] -- returns list of all elements but the last
 [2,4,6]
-> length [2,4,6,8]
+> length [2,4,6,8] -- returns the length of the list
 4
-> null [2,4,6,8]
+> null [2,4,6,8] -- returns if list is empty
 False
-> reverse [2,4,6,8]
+> reverse [2,4,6,8] -- returns the reverse
 [8,6,4,2]
 > take 2 [2,4,6,8]
 [2,4]
