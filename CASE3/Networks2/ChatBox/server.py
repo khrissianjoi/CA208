@@ -1,10 +1,10 @@
-#server.py
+# server.py
 
 import socket
 import threading
 import sys
 
-ip_addr= '127.0.0.1'
+ip_addr = '127.0.0.1'
 port = 8000
 
 print("server started")
@@ -21,56 +21,63 @@ serversocket.listen(100)
 # store the connected devices
 connected_devices = {}
 
-# function to create thread
-def start_client_thread(connection,address):
-	th = threading.Thread(target=client_thread, args=(connection, address))
-	th.start()
-	connected_devices[connection]['thread'] = th
 
-# broadcast function, send data to all clients (except the original sender)
+def start_client_thread(connection, address):
+    '''function to create thread'''
+    th = threading.Thread(target=client_thread, args=(connection, address))
+    th.start()
+    connected_devices[connection]['thread'] = th
+
+
 def broadcast(message, original_conn):
-	# loop through connected devices
-	# send data to connection
-	for conn in connected_devices:
-		if conn != original_conn:
-			conn.send(message.encode())
+    '''broadcast function, send data to all
+    clients (except the original sender)'''
+    # loop through connected devices
+    # send data to connection
+    for conn in connected_devices:
+        if conn != original_conn:
+            conn.send(message.encode())
 
-# function to handle a client connection thread
+
 def client_thread(conn, addr):
-	welcome = "Welcome to the chatroom"
-	conn.send(welcome.encode()) # unicode to bytes
+    '''function to handle a client connection thread'''
+    welcome = "Welcome to the chatroom"
+    # unicode to bytes
+    conn.send(welcome.encode())
 
-	# if the client sends us data
-	# send the data to every other client
-	while server_running:
-		try:
-			message = conn.recv(1024) #grab 1024 first bytes
-			if message is not None:
-				# bytes turn to string
-				enc_message = message.decode()
-				message_to_send = "<{}> {}".format(addr, enc_message)
-				print(message_to_send)
-				broadcast(message_to_send, conn)
-		except:
-			continue
+    # if the client sends us data
+    # send the data to every other client
+    while server_running:
+        try:
+            # grab 1024 first bytes
+            message = conn.recv(1024)
+            if message is not None:
+                # bytes turn to string
+                enc_message = message.decode()
+                message_to_send = "<{}> {}".format(addr, enc_message)
+                print(message_to_send)
+                broadcast(message_to_send, conn)
+        except:
+            continue
 
-# main loop=
+
+# main loop
 # loop forever
 # if there is a client waiting to connect
 # make a thread for that client
 # goto 1
 try:
-	while True:
-		conn, addr = serversocket.accept()
-		connected_devices[conn] = {'addr':addr}
-		print("{} connected".format(addr))
-		# start thread for client connection 
-		start_client_thread(conn, addr)
+    while True:
+        conn, addr = serversocket.accept()
+        connected_devices[conn] = {'addr': addr}
+        print("{} connected".format(addr))
+        # start thread for client connection
+        start_client_thread(conn, addr)
 except KeyboardInterrupt:
-	print("Server shutting down")
-	for conn in connected_devices:
-		conn.close()
-	serversocket.close()
-	server_running = False
-	print("Goodbye")
-	sys.exit(0)
+    print("Server shutting down")
+    for conn in connected_devices:
+        conn.close()
+    serversocket.close()
+    server_running = False
+    print("Goodbye")
+    sys.exit(0)
