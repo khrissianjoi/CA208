@@ -4,8 +4,8 @@ import socket
 import select
 import sys
 
-ip_address = '136.206.18.113'
-port = 8100
+ip_address = '127.0.0.1'
+port = 8000
 
 server_connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_connection.connect((ip_address, port))

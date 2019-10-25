@@ -4,8 +4,8 @@ import socket
 import threading
 import sys
 
-ip_addr= '136.206.217.50'
-port = 8888
+ip_addr= '127.0.0.1'
+port = 8000
 
 print("server started")
 
