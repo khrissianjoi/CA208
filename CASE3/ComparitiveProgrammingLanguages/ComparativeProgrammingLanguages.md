@@ -1,3 +1,11 @@
+## Data, Types and Scope
+
+### Types
+Types are sets that defined by the values the set contains and the operations on these values.
+
+#### Primitive Types
+- cannot be decomposed into simplet values.
+
 ## Abstractions
 
 ### The Abstraction Principle
