@@ -5,6 +5,7 @@ Types are sets that defined by the values the set contains and the operations on
 
 #### Primitive Types
 - cannot be decomposed into simplet values.
+eg. Boolean
 
 ## Abstractions
 
