@@ -14,6 +14,7 @@ class Queue:
 
     def size(self):
         return len(self.items)
+        
 
 class Task:
     def __init__(self, data):
