@@ -1,9 +1,7 @@
 ### Haskell Notes
 
-*Base Case:* empty list (usually)
-*Inductive Case:* non-empty list
 ```haskell
-mySum [] = 0
+mySum [] = 0 -- base case
 mySum (x:xs) = x + mySum xs -- inductive case
 ```
 
