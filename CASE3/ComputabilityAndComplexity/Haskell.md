@@ -1,3 +1,11 @@
+### Haskell Notes
+
+*Base Case:* empty list (usually)
+*Inductive Case:* non-empty list
+```haskell
+mySum [] = 0
+mySum (x:xs) = x + mySum xs -- inductive case
+```
 
 ## Haskell List Functions
 ```haskell
@@ -24,3 +32,4 @@ False
 > elem 4 [2,8,4,6] -- returns boolean, if element in list
 True
 ```
+
