@@ -148,6 +148,20 @@ Major approaches:
 construct other types of procedures.
 This states that it is possible to design procedures that abstract over any syntactic category, provided only that the constructs in the syntactic category specify some kind of computation.
 
+# Assertions and Exceptions
+
+## Assertions 
+### Preconditions
+A boolean condition that must hold (be true) when a method is called.
+### Post-conditions
+A boolean condition that must hold after a method completes successfuly.
+
+## Design by Contract
+Based on the principle that the classes of a system should communicate with one anotehr on the basis of precisely defined benefits and obligations.
+
+## Exceptions
+ABnormal situations that prevent the program from continuing normally.
+
 # Functional Programming Paradigm
 
 # Object Oriented Programming
@@ -155,3 +169,6 @@ This states that it is possible to design procedures that abstract over any synt
 ## Inheritance
 A _subclass_ inherits the member variables and methods from its _superclass_. 
 It may override the superclass's methods by providing a more specialised version of these methods.
+### Dynamic Dispatch
+Dynamic dispatch is the mechanism that allows polymorphic operations.
+When the appropriate method is invoked to a type of object after examiniation.
