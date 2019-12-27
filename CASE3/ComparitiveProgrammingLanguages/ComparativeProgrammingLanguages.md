@@ -97,7 +97,30 @@ eg: green=go;...;red = stop
     - **C++:** a mix of programmer control and data structure lifetime
     - **Java:** automatic, garbage collection
 
-#### Garbage Collection
+### Garbage Collection
+Java garbage collecction
+
+- Whenever the **new** operator is called to create a new object, sufficient memory is allocated from the heap (memory used to store Java objects).
+- The **new** operator returns a _reference_ to the allocated heap memory.
+
+Major approaches:
+#### Reference Counts
+- The reference count increments whenever a block of allocated heap memory is assigned to a memory.
+- The reference count decremets when a variable contains a reference to a block of allocated heap memory goes out of scope (function finishes).
+- When the reference count for a block of heap memory becomes zero, the block of memory can be used for garbage collection.
+
+#### Mark and Sweep
+- **_Stop-the-World_ events**: all activities/threads are suspended until the garbage collection finishes
+- **Mark**:
+    - starts with every garbage collection root:
+        - local varialbes and inpur parameters of currently executing module
+        - active threads
+        - static fields of loaded classes
+        - JNI references
+    - traverses the object graph from the garbage collection roots, every object visited is marked as alive.
+- **Sweep**: unmarked objects are available for garbage collection, and are returned to the heap.
+- **Compaction**: remaining allocated blocks are in contigious block of memory at the start of the heap. Easier to allocate memory to new object.
+- **Generational**
 
 ## Abstractions
 
