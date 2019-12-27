@@ -6,6 +6,7 @@ The SOLID principles are _**five** dependecy management_ for OOP and design.
     there should never be more than one reason for a class to change. You should design your classes to that each has a single purpose.
 
     reduces the risk of new errors being introduced by limity changed to existing code
+    
 - **Open/Closed Principle**:
     specifies that software entities (classes,modules,functions,etc.) should be open for extension but closed for modification. The "closed" part of the rule states that once a module has been developed and tested, the code should only be adjusted to correct bugs. The "open" part says that you should be able to extend existing code in order to introduce new functionality.
 
