@@ -4,7 +4,7 @@
 Types are sets that defined by the values the set contains and the operations on these values.
 
 ### Primitive Types
-cannot be decomposed into simplet values.
+cannot be decomposed into simpler values.
 - **Boolean**
     - 2 values, _true_ or _false_ or predefined values, (eg in C, 0 is false else is true)
 - **Character**
@@ -72,6 +72,21 @@ Recursive types occur in:
 
 ### Type System
 
+## Static vs. Dynamic Scoping
+### Statically Scoped
+- the body of a procedure is executed in the environemnt of the _procedure's definition_.
+- **Binding Occurence:** examining the program's source code.
+
+### Dynamically Scoped
+- the body of a procedure is executed in the environment of the _procedure's invocation_.
+- **Binding Occurence:** run-time.
+
+## Declaration
+A declecration produces a binding between an identifier and an entity.
+### Type Declaration
+- **Type Definition:** binds an identifier to an exisiting type/
+- **New-type Definition:** binds an identifier toa new type.
+
 ## Syntax vs Semantics
 ### Syntax
 - The _form_ or _structure_ of the expressions, statements, and program units.
@@ -124,6 +139,19 @@ Major approaches:
 
 ## Abstractions
 
+### Proper Procedure
+- contains command to be executed and when it is called it will update variables.
+### Function Procedure
+- contains an expression to be evalutated and returns a result.
+
 ### The Abstraction Principle
-construct other types of procedures. 
+construct other types of procedures.
 This states that it is possible to design procedures that abstract over any syntactic category, provided only that the constructs in the syntactic category specify some kind of computation.
+
+# Functional Programming Paradigm
+
+# Object Oriented Programming
+
+## Inheritance
+A _subclass_ inherits the member variables and methods from its _superclass_. 
+It may override the superclass's methods by providing a more specialised version of these methods.
