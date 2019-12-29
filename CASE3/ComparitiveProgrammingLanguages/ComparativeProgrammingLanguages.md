@@ -27,6 +27,9 @@ The notation (x,y) whose first value is x and the second value is y.
 - **Basic Operations**
     - **construction**
     - **selection**
+
+- **Cardinality** 
+    - \#(S x T) = \#S x \#T
 #### Mapping
 eg. arrays
 The notation
@@ -36,6 +39,10 @@ An indexed sequence of elements with one element of T for each index (from S)
 - **Basic Operations**
     - **construction**
     - **indexing**
+
+- **Cardinality**
+    - \#(S &rarr; T) = \#(T)<sup>\#S</sup>
+
 #### Disjoint Unions
 eg. algebraic types, discriminated records and objects.
 Selected from one of several, possibly different,sets.
@@ -98,6 +105,38 @@ eg: Traffic Light: green(bottom);yellow;red
 - Interpreter
 - Compiler
 eg: green=go;...;red = stop
+
+## Blocks
+A construct that delimits the scope of any declaration within it.
+- #### C:
+    - ({...})
+    - function bodies
+    - whole programme itself
+- #### Java:
+    - ({...})
+    - method bodies
+    - whole programme itself
+- #### Python:
+    - function bodies
+    - method bodies
+    - class definitions
+- #### Ada:
+    - commands
+    - procedure bodies
+    - whole programme itself
+
+|  	|  	|  	|
+|:-: |:-:	|:-:	|
+| **Monolithic Block Structure** 	| **Flat Block Structure**	| **Nested Block Structure**	|
+| The whole programme is the only block 	| The programme is partitioned in several non-overlapping blocks. 	|  Blocks may be nested within other blocks	|
+
+![Block types](../images/blocks.png)
+
+### Block Command
+a command that contains a local declaration D (or a group of declarations) and a subcommand C. The binding produced by D are only in effect for the execution of C. ({})
+
+### Block Expression
+An expression that contains a local declaration d (or a group of declaration) and a subexpression E. The binding produced by D are only in effect for the evaluation of E (let (haskell))
 
 ## Pointers and Memory Management
 
