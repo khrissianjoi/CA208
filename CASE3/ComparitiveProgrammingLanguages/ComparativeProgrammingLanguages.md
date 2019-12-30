@@ -125,18 +125,17 @@ A construct that delimits the scope of any declaration within it.
     - procedure bodies
     - whole programme itself
 
-|  	|  	|  	|
-|:-: |:-:	|:-:	|
 | **Monolithic Block Structure** 	| **Flat Block Structure**	| **Nested Block Structure**	|
+|:-: |:-:	|:-:	|
 | The whole programme is the only block 	| The programme is partitioned in several non-overlapping blocks. 	|  Blocks may be nested within other blocks	|
 
 ![Block types](../images/blocks.png)
 
 ### Block Command
-a command that contains a local declaration D (or a group of declarations) and a subcommand C. The binding produced by D are only in effect for the execution of C. ({})
+a command that contains a local declaration D (or a group of declarations) and a subcommand C. The binding produced by D are only in effect for the execution of C. (**{}** (java))
 
 ### Block Expression
-An expression that contains a local declaration d (or a group of declaration) and a subexpression E. The binding produced by D are only in effect for the evaluation of E (let (haskell))
+An expression that contains a local declaration d (or a group of declaration) and a subexpression E. The binding produced by D are only in effect for the evaluation of E (**let** (haskell))
 
 ## Pointers and Memory Management
 
@@ -187,21 +186,78 @@ Major approaches:
 construct other types of procedures.
 This states that it is possible to design procedures that abstract over any syntactic category, provided only that the constructs in the syntactic category specify some kind of computation.
 
+## Parameters and Arguments
+
+An **argument** is a value that is passed to a procedure.
+An **_actual parameter_** is an expression that yields an arugment.
+A **_formal paramenter_** is an _identifier_ through which a procedure can access an argument.
+
+```python
+class BankAccount:
+    ....
+    def processDeposit(self,deposit):
+        self.currentAmount += deposit # deposit is the "formal parameter"
+
+def main():
+    myBankAccount = BankAccount()
+    myBankAccount.processDeposit(200) # 200 is the "actual parameter"
+```
+### Parameter Passing Mechanisms
+#### Copy Parameter Passing Mechanism
+- binds the formal parameter to a local vairable that contains a copy of the argument
+    - **Copy-in**
+    - **Copy-out**
+    - **Copy-in Copy-out**
+
+#### Reference Parameter Passing Mechanism
+- binds the formal parameter directly to the argument itself
+    - **Constant parameter**
+    - **Variable parameter** 
+    - **Procedure parameter** 
+
+## The Correspondence Principle
+
 # Assertions and Exceptions
 
 ## Assertions 
-### Preconditions
+### Pre-conditions
 A boolean condition that must hold (be true) when a method is called.
 ### Post-conditions
 A boolean condition that must hold after a method completes successfuly.
 
 ## Design by Contract
-Based on the principle that the classes of a system should communicate with one anotehr on the basis of precisely defined benefits and obligations.
+Based on the principle that the classes of a system should communicate with one another on the basis of precisely defined benefits and obligations.
+Uses pre-conditions and post-conditions to document the change in state caused by a piece of a program.
 
 ## Exceptions
 ABnormal situations that prevent the program from continuing normally.
 
-# Functional Programming Paradigm
+# Functional Programming
+
+## Key Concepts
+- ### Expressions
+    - computes new values from old values
+- ### Functions
+    - first class values
+    - abstract over expressions
+    - can be passed as arguments to functions and computed as a results off other functions
+    - higher-order function: one that takes other functions as arguments or computed another functions as a results
+    - can be built into composite values
+- ### Parametric Polymorphism
+    - a function operates on values of a type family rather than just one type
+- ### Data Abstrations
+- ### Lazy Evaluation
+    - relates to when an expression is evaluated.
+    - order of evaluation:
+        - Eager Evaluation: 
+            - evaluate at the point of call.
+            - to substitute the actual argument value for each occurence of the formal parameter.
+        - Normal-order evaluation:
+            - evaluate the actual parameter only when the argument is actually needed
+            - to substitute the actual _unevaluated_ parameter for each occurence of the formal parameter
+        - Lazy evaluation:
+            - evaluate the actual parameter when the argument is _first_ needed and then store its value for whenever it is subsequently needed.
+
 
 # Object Oriented Programming
 
@@ -209,5 +265,5 @@ ABnormal situations that prevent the program from continuing normally.
 A _subclass_ inherits the member variables and methods from its _superclass_. 
 It may override the superclass's methods by providing a more specialised version of these methods.
 ### Dynamic Dispatch
-Dynamic dispatch is the mechanism that allows polymorphic operations.
+Dynamic dispatch is the mechanism that allows _polymorphic operations._
 When the appropriate method is invoked to a type of object after examiniation.
