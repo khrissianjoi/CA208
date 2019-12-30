@@ -1,4 +1,4 @@
-## SOLID
+# SOLID
 
 The SOLID principles are _**five** dependecy management_ for OOP and design.
 
@@ -11,7 +11,7 @@ The SOLID principles are _**five** dependecy management_ for OOP and design.
 - ### Open/Closed Principle:
     - Software entities (classes, modules, functions, etc.) should:
         - be open for extension but closed for modification.
-            - **Closed**: should only be adjusted to correct bugs
+            - **Closed**: should only be _adjusted_ to correct bugs
             - **Open**: should only extend existing code in order to introduce _new functionality_.
     - reduces the risk of new errors being introduced by limity changed to existing code.
 
