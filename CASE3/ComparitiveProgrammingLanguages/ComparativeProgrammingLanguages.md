@@ -106,6 +106,12 @@ eg: Traffic Light: green(bottom);yellow;red
 - Compiler
 eg: green=go;...;red = stop
 
+## Bindings and Enivronments
+### Binding
+A fixed association between an identifier and a variable, value or procedure.
+### Environment
+(namespace) a set of bindings.
+
 ## Blocks
 A construct that delimits the scope of any declaration within it.
 - #### C:
@@ -177,10 +183,15 @@ Major approaches:
 
 ## Abstractions
 
+- allows us to focus on general ideas rather than specific manifestations of these ideas.
+- hides all but the relevant data about an object in order to reduce complexity and increase efficiency.
+
 ### Proper Procedure
-- contains command to be executed and when it is called it will update variables.
+- contains command to be executed.
+- when it is called it will update variables.
 ### Function Procedure
-- contains an expression to be evalutated and returns a result.
+- contains an expression to be evalutated 
+- returns a result.
 
 ### The Abstraction Principle
 construct other types of procedures.
@@ -219,8 +230,13 @@ def main():
 
 # Assertions and Exceptions
 
-## Assertions 
-### Pre-conditions
+## Assertions
+- typically tests that are performed at run-time.
+- generates to an exception if evaluation is false.
+- used to support two different approaches to software development, _**Design by Refinement**_ and _**Design by Contract**_.
+- used to automatically generate test cases.
+
+### Preconditions
 A boolean condition that must hold (be true) when a method is called.
 ### Post-conditions
 A boolean condition that must hold after a method completes successfuly.
@@ -230,7 +246,61 @@ Based on the principle that the classes of a system should communicate with one 
 Uses pre-conditions and post-conditions to document the change in state caused by a piece of a program.
 
 ## Exceptions
-ABnormal situations that prevent the program from continuing normally.
+Abnormal situations that prevent the program from continuing normally.
+
+# Object Oriented Programming
+
+## Inheritance
+A _subclass_ inherits the member variables and methods from its _superclass_. 
+It may override the superclass's methods by providing a more specialised version of these methods.
+### Dynamic Dispatch
+Dynamic dispatch is the mechanism that allows _polymorphic operations._
+When the appropriate method is invoked to a type of object after examiniation.
+
+# Logic Programming Paradigm
+
+**Based on the following three concepts:**
+
+### Assertions
+form:
+r(T<sub>1</sub>,...,T<sub>n</sub>)
+- r is an n-ary relation
+- T<sub>1</sub>....,T<sub>n</sub> are _terms_ that can contain variables
+
+```prolog
+white(255, 255, 255).
+black(0, 0, 0).
+blue(27, 0, 230).
+red(230, 0, 0).
+```
+### Horn Clauses
+**A logic program is a collection of Horn clauses**
+form
+A<sub>0</sub> if A<sub>1</sub> and .. and A<sub>n</sub>
+if A<sub>1</sub> and .. and A<sub>n</sub> are **true** then A<sub>0</sub> is _**true**_
+A _fact_ is a specifal case of Horn clause where n=0. A<sub>0</sub> is unconditionally _true_.
+
+```prolog
+grandmother(X,Z) :- mother(X,Y), parent(Y,Z).
+grandchild(Z,X) :- mother(Z,Y), parent(X,Y).
+```
+
+### Relation
+- defined in terms of simpler relations.
+- no procedures.
+- a typical logic program consists of a vast number of relations.
+
+## Bindings and Scope
+- The scope of a relation is the entire program
+- The scope of a variable is the whole clause in which it occurs.
+
+every variable is either:
+### Universally Quanitified
+- a variable the occurs in the left-hand side of a clause.
+
+### Existentially Quantified
+- a varialbe the occurs in the righh-hand side of a clause.
+- a variable that occurs in a query.
 
 # Functional Programming
 
@@ -257,13 +327,3 @@ ABnormal situations that prevent the program from continuing normally.
             - to substitute the actual _unevaluated_ parameter for each occurence of the formal parameter
         - Lazy evaluation:
             - evaluate the actual parameter when the argument is _first_ needed and then store its value for whenever it is subsequently needed.
-
-
-# Object Oriented Programming
-
-## Inheritance
-A _subclass_ inherits the member variables and methods from its _superclass_. 
-It may override the superclass's methods by providing a more specialised version of these methods.
-### Dynamic Dispatch
-Dynamic dispatch is the mechanism that allows _polymorphic operations._
-When the appropriate method is invoked to a type of object after examiniation.
