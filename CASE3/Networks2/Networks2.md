@@ -202,3 +202,101 @@ mcgorma.computing.dcu.ie = Admin email
 2419200 = expire (4 weeks), When the zone data is no longer authoritative, used by slave dns servers
 604800 = Negative cache TTL – caching error responses, e.g. 404
 ```
+
+# Spanning Trees
+
+- Switches replace many routers in modern LAN and Enterprise Networks.
+- Operate on MAC Addresses
+- Self configuirng networks
+- Need: loop free networks and problem avoidance
+- Redundancy and fault tolerance (nice to have)
+
+## Spanning Tree Protocol (STP)
+- Creates a spanning tree within a mesh network or graph of layer-2 bridge, disabling edges which are not part of the tree.
+- One path between any two nodes.
+- Loops are eliminated.
+- Allow reorginasation of links in case of a link failure.
+
+## SDP Operation Summary
+- **Root Bridge**: Elect ROOT bridge (ID = Priority + MAC Address)
+- **Root Port**: Other bridges determine a least cost path to the root bridge, the port used is a **root port**.
+- **Disable**: Disable all other possible root paths (make a tree).
+- Rules
+- **Designated port** chosen as port linking that segment to the root (shortest to it).
+- **Forwarding State**: Root ports or designated ports enter this state and carry traffic.
+- **Blocking State**: Other ports (else) will entter this state. Only BPDU can transmit or recieve any traffic.
+- **BDPU**: used as control and information frames to assist protocol operation, bridge IDS, route costs, port numbers etc.
+
+# Firewall
+A barrier that prevents **unauthorised** or **unwanted _communication_** between sections of a computer network.
+- Protects our LAN from unauthorised access
+- Allow shh access from specified ip addresses (whitelisting)
+
+## Firewall Tech
+
+### 1st Generation
+- Stateless packet filter
+- Filter packets on:
+    - Source/destination IP
+    - Protocol (TCP/UDP)
+    - Port Number
+- When a filter is created possible actions are:
+    - DROP:
+        - Silently discard packet
+    - REJECT:
+        - Discard with error response
+    - ACCEPT:
+        - Route the packet (tells where to go)
+
+### 2nd Generation
+- Stateful packets
+- Filter packets on:
+    - Source/destination IP
+    - Protocol (TCP/UDP)
+    - Port Number
+    - Existing/New Sessions
+- Packet filters can determine a packets positional in a protocol stream. (packet from new connection,new connection)
+- DROP/REJECT/ACCEPT accordingly
+
+### 3rd Generation
+- Application later
+- Filter packets on:
+    - Source/destination IP
+    - Protocol (TCP/UDP)
+    - Port Number
+    - Existing/New Sessions
+    - FTP
+    - DNS
+    - HTTP
+    - HTTPS
+- Filter per process (not port)
+- Process rulesset
+- DROP/REJECT/ACCEPT accordingly
+
+## Firewall Types
+### Application Layer
+- Work on a process basis
+- Allow/restrict network access
+- Allow restrict system calls to OS
+
+### Packet Filters
+- Inspects packets going to/from a network
+- Checked again a series of rules
+- Each rule contains actions
+
+### Poxy Firewall
+- Gateway between networks
+- Proxy server where all traffic to and from a network pass through
+- Common rules (IP whitelisting/blacklisting)
+
+### IPTABLE
+example rules
+```bash
+sudo iptables -A INPUT -i lo -j ACCEPT
+
+sudo iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT
+
+sudo iptables -A INPUT -p tcp -s 0/0 -d 192.168.20.1 --dport 80 –j ACCEPT
+
+sudo iptables –A INPUT –j DROP
+```

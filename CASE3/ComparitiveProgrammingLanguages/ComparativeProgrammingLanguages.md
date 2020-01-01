@@ -61,21 +61,21 @@ Recursive types occur in:
 - **Lists**:
     If elements in list are the same type it is homogeneous, else hetrogeneous.
     - **Basic Operations**
-        - **construction**
-        - **length**
-        - **empty test**
-        - **head selection**
-        - **tail selection**
-        - **concatentation**
+        - construction
+        - length
+        - empty test
+        - head selection
+        - tail selection
+        - concatentation
 - **Strings**:
     A sequence of characters.
     - **Basic Operations**
-        - **length**
-        - **equality test**
-        - **lexicographical comparison**
-        - **character selection**
-        - **substring selection**
-        - **concatentation**
+        - length
+        - equality test
+        - lexicographical comparison
+        - character selection
+        - substring selection
+        - concatentation
 
 ### Type System
 
