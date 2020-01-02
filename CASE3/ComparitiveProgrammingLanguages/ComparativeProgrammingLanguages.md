@@ -1,8 +1,12 @@
 # Data, Types and Scope
 -------------
 ## Types
-Types are sets that defined by the values the set contains and the operations on these values.
-
+A set of values
+If we say x is of type T then we are implying the x ∈ T.
+If an expression E is of type T then we are implying that when E is evaluated the result of that would be of type a T.
+Each operation associated with a type must act uniformly when applied to all values of the type.
+Types are sets that defined by the values the set contains and the
+operations on these values.
 ### Primitive Types
 cannot be decomposed into simpler values.
 - **Boolean**
@@ -129,6 +133,11 @@ Setting the value of an attribute.
 | **Execution-Time Bindings** 	| Static Binding 	|
 ### Environment
 (namespace) a set of bindings.
+
+### Scope
+The scope of a _decleration_ is the section of the programme text in which the decleration is in effect.
+
+The scope of a _binding_ is the section of the programme text in which the binding is applied.
 
 ## Blocks
 A construct that delimits the scope of any declaration within it.
