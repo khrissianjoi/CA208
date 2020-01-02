@@ -1,5 +1,5 @@
 # Data, Types and Scope
-
+-------------
 ## Types
 Types are sets that defined by the values the set contains and the operations on these values.
 
@@ -79,13 +79,13 @@ Recursive types occur in:
 
 ### Type System
 
-## Static vs. Dynamic Scoping
-### Statically Scoped
+### Static vs. Dynamic Scoping
+#### Statically Scoped
 - the body of a procedure is executed in the environemnt of the _procedure's definition_.
 - **Binding Occurence:** examining the program's source code.
 
-### Dynamically Scoped
-- the body of a procedure is executed in the environment of the _procedure's invocation_.
+#### Dynamically Scoped
+- the body of a procedure is executed in the environment of the _procedure's call_.
 - **Binding Occurence:** run-time.
 
 ## Declaration
@@ -96,11 +96,21 @@ A declecration produces a binding between an identifier and an entity.
 
 ## Syntax vs Semantics
 ### Syntax
+Define how statements are form in a language.
+Made up of:
+    - _**lexical rules**_: define the alphabet of the language and how these characters are combined to form valid words.
+    - _**syntax rules**_: define how valid words ar combined to form valid statements. 
 - The _form_ or _structure_ of the expressions, statements, and program units.
 - Context free grammars
 - Regular expressions
 eg: Traffic Light: green(bottom);yellow;red
+
 ### Semantics
+Defines the meaning of a program.
+Two ways of formally specifying the sematics of a language:
+    - **Axiomatic Semantics**: defines the execution of a program in terms of a state machine
+    - **Denotational Semantics**: specifies each language statement in terms of mathematical objects.
+
 - The meaning of the expressions, statements and program units.
 - Interpreter
 - Compiler
@@ -109,6 +119,14 @@ eg: green=go;...;red = stop
 ## Bindings and Enivronments
 ### Binding
 A fixed association between an identifier and a variable, value or procedure.
+Setting the value of an attribute.
+
+|   | |
+|:-: |:-:	|
+| **Language Definition Time Binding** 	| Static Binding	|
+| **Language Implementation Time Bindings** 	| Static Binding 	|
+| **Compile-Time Bindings** 	| Static Binding 	|
+| **Execution-Time Bindings** 	| Static Binding 	|
 ### Environment
 (namespace) a set of bindings.
 
@@ -143,8 +161,8 @@ a command that contains a local declaration D (or a group of declarations) and a
 ### Block Expression
 An expression that contains a local declaration d (or a group of declaration) and a subexpression E. The binding produced by D are only in effect for the evaluation of E (**let** (haskell))
 
-## Pointers and Memory Management
-
+# Pointers and Memory Management
+-------------
 ### Managing Dynamic Memory
 #### Allocate memory
 - request a block of memory big enough to a defined data element. 
@@ -181,16 +199,16 @@ Major approaches:
 - **Compaction**: remaining allocated blocks are in contigious block of memory at the start of the heap. Easier to allocate memory to new object.
 - **Generational**
 
-## Abstractions
-
+# Abstractions
+-------------
 - allows us to focus on general ideas rather than specific manifestations of these ideas.
 - hides all but the relevant data about an object in order to reduce complexity and increase efficiency.
 
 ### Proper Procedure
-- contains command to be executed.
+- contains _command_ to be executed.
 - when it is called it will update variables.
 ### Function Procedure
-- contains an expression to be evalutated 
+- contains an _expression_ to be evalutated 
 - returns a result.
 
 ### The Abstraction Principle
@@ -229,7 +247,7 @@ def main():
 ## The Correspondence Principle
 
 # Assertions and Exceptions
-
+-------------
 ## Assertions
 - typically tests that are performed at run-time.
 - generates to an exception if evaluation is false.
@@ -249,7 +267,7 @@ Uses pre-conditions and post-conditions to document the change in state caused b
 Abnormal situations that prevent the program from continuing normally.
 
 # Object Oriented Programming
-
+-------------
 ## Inheritance
 A _subclass_ inherits the member variables and methods from its _superclass_. 
 It may override the superclass's methods by providing a more specialised version of these methods.
@@ -258,7 +276,7 @@ Dynamic dispatch is the mechanism that allows _polymorphic operations._
 When the appropriate method is invoked to a type of object after examiniation.
 
 # Logic Programming Paradigm
-
+-------------
 **Based on the following three concepts:**
 
 ### Assertions
@@ -303,7 +321,7 @@ every variable is either:
 - a variable that occurs in a query.
 
 # Functional Programming
-
+-------------
 ## Key Concepts
 - ### Expressions
     - computes new values from old values
@@ -327,3 +345,13 @@ every variable is either:
             - to substitute the actual _unevaluated_ parameter for each occurence of the formal parameter
         - Lazy evaluation:
             - evaluate the actual parameter when the argument is _first_ needed and then store its value for whenever it is subsequently needed.
+
+## Haskell: Higher Order Functions
+A function that has functional parameters or functional results.
+
+In Haskell functions:
+- are _**first-class values**_.
+- can be passed as parameters
+- can be computed as function results
+- built into composite values
+

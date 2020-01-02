@@ -6,7 +6,9 @@ The SOLID principles are _**five** dependecy management_ for OOP and design.
     - Classes should:
         - **NEVER** have more than one reason to change.
         - Have a single purpose.
-    - reduces the risk of new errors being introduced by limity changed to existing code
+    #### Advantages
+    -  Classes become smaller and cleaner.
+    - Simpler code to understand and maintain.
 
     #### Violates SRP
     ```C#
@@ -68,7 +70,7 @@ The SOLID principles are _**five** dependecy management_ for OOP and design.
         }
     }
     ```
-        
+
     - ### Open/Closed Principle:
         - Software entities (classes, modules, functions, etc.) should:
             - be open for extension but closed for modification.
@@ -153,6 +155,11 @@ The SOLID principles are _**five** dependecy management_ for OOP and design.
 - ### Interface Segregation Principle (ISP):
     - Clients should not be forced to depened upon interfaces that they do not use.
         - When one class depends upon another, the number of members in the interface is is visible to the dependent class should be minimised.
+    #### Advantages
+    - Class and their dependencies communicate using tightly-focused inferfaces, minimising dependencies on unused members and reducing coupling accordingly
+    - Easier to implement
+    - Improve flexibility and the possbility of reuse.
+    - Robustness increase
 
     #### Violates ISP
     ```C#
@@ -238,7 +245,12 @@ The SOLID principles are _**five** dependecy management_ for OOP and design.
     - Abstraction should not depend upon details.
     - Details should depend upon abstractions.
 
-
+    #### Advantages
+    - Loosely coupled increases robustness of the software
+    - Improves flexibility
+    - Raise possibilty of reuse
+    - Without DIP only low level classes can be easily reusable
+    
     #### Violates DIP
     ```C#
     public class BankAccount
