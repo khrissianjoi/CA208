@@ -272,6 +272,20 @@ A boolean condition that must hold after a method completes successfuly.
 Based on the principle that the classes of a system should communicate with one another on the basis of precisely defined benefits and obligations.
 Uses pre-conditions and post-conditions to document the change in state caused by a piece of a program.
 
+## Invariants
+- _**Class invariants**_ must be true about each instance of a class (Design by Contract):
+    - applies to every instance of a class at all times except when an instance is in transition from one consistent state to another.
+    - specify the relationships among multiple attributes
+    - should be true before and after any method completes.
+    Example:
+    - Implementing a balanced tree data structure.
+    - A class invariant could be that the tree is balanced.
+    - This could be implemented as a private method checking that the tree was balanced.
+- _**Loop invariants**_ must be true in each iteration of a loop (Design by Refinement):
+    -
+
+
+
 ## Exceptions
 Abnormal situations that prevent the program from continuing normally.
 
@@ -280,6 +294,7 @@ Abnormal situations that prevent the program from continuing normally.
 ## Inheritance
 A _subclass_ inherits the member variables and methods from its _superclass_. 
 It may override the superclass's methods by providing a more specialised version of these methods.
+
 ### Dynamic Dispatch
 Dynamic dispatch is the mechanism that allows _polymorphic operations._
 When the appropriate method is invoked to a type of object after examiniation.
@@ -329,6 +344,24 @@ every variable is either:
 - a varialbe the occurs in the righh-hand side of a clause.
 - a variable that occurs in a query.
 
+## Cut
+A special sequencer in Prolog called cut, _**!**_ that control _**backtracking**_.
+- always succeds
+- has the effect of freezing any assignments of values to variables that occured before the cut.
+
+## Database Manipulation
+Prolog stores all its clauses (facts and rules) in its own internal database:
+    - Four database manipulation commands:
+        - **asserts**: add clauses to the end of the database 
+        - **asserta**: adds clauses to the start of the database
+        - **assertz**: add clauses to the end of the database
+        - **retract**: removes a matching clause from the database
+    - Always succeed
+
+Database manipulation commands give us the ability to:
+    - **Dynamic Predicates**: change the meaning of predicates while we are running programs.
+    - **Memoisation**: store the results to computation.
+
 # Functional Programming
 -------------
 ## Key Concepts
@@ -363,4 +396,26 @@ In Haskell functions:
 - can be passed as parameters
 - can be computed as function results
 - built into composite values
+
+```haskell
+power :: (Int,Float) ->Float
+power (n,b)
+    | n == 0 = 0.0
+    | otherwise = b * power (x, b)
+    where x = n - 1
+
+powerc :: Int -> Float -> Float
+powerc n b
+    | n == 0 = 1.0
+    | otherwise = b * powerc x b
+    where x = n - 1
+```
+- Curried Function
+- Partial Application
+
+**filter**: computes a new list, keeping those elements x from the original list where f x is True.
+**map**: computes a new list by applying a function f to all elements x of the original list.
+**foldr**: recursively combines the first element with the results of combining the rest of the list.
+**foldl**: recursively combines the last element with the results of combining the previous elements of the list.
+
 

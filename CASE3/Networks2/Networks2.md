@@ -126,10 +126,15 @@ subnet192 = 255 # Broadcast address of last subnet is always 255
 
 
 # DNS - Domain Name System
+
+**nslookup**: used to test DNS server.
+**dig**: DNS testing utility which can tell if your DNS server is working.
+**reverse lookup**: the reverse of the "forward DNS lookup", the DNS is queried for with a hostname using an IP address.
+
 A server (DNS server) with a database of IP adrresses
 
 ```python
-#DNS Loopup or DNS resolve
+#DNS Lokpup or DNS resolve
 DNSServer = getDNSDatabase()
 DomainName = input()
 ipAddress = DNSserver[DomainName]

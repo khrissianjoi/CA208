@@ -129,7 +129,7 @@ Each from-state, input tape reading symbol and top of the stack combination is u
 Only _**one possible course of action**_ given any applicable from-state, current input symbol and top of stack and only one possibly computational path for any string accepted by this PDA.
 
 # Turing Machines
-A Turing Machine, M, accepts a language L, iff M accepts all strings in L and rejects (i.e., fails to halt on) all strings not in L
+A Turing Machine, M, accepts a language L, iff M accepts all strings in L and rejects (i.e., fails to halt on) all strings not in L.
 A language is Turing acceptable if and only if there is some Turing Machine that accepts it.
 
 A Turing Machine, M, is a quadruple (K, Σ,s, δ), where
