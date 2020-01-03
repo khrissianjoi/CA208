@@ -18,3 +18,12 @@ powerc n b
     | otherwise = b * powerc x b
     where x = n - 1
 -- sqr = powerc 3
+
+-- disjoint union
+data Number = Exact Integer | Inexact Float
+              deriving (Show, Read)
+
+check :: Int -> Number
+check n =
+    let pi = Inexact 3
+    in pi

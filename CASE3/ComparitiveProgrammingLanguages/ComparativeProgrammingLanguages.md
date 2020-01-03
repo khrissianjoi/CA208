@@ -242,18 +242,20 @@ def main():
 ```
 ### Parameter Passing Mechanisms
 #### Copy Parameter Passing Mechanism
-- binds the formal parameter to a local vairable that contains a copy of the argument
-    - **Copy-in**
-    - **Copy-out**
-    - **Copy-in Copy-out**
+- binds the formal parameter to a local variable that contains a copy of the argument
+    - **Copy-in**: a local variable is created and initialised with the value of the argument.
+    - **Copy-out**: a local variable is created but not initialised.
+    - **Copy-in Copy-out**: a local variable is created and initialised with the value of the argument.
 
 #### Reference Parameter Passing Mechanism
 - binds the formal parameter directly to the argument itself
-    - **Constant parameter**
-    - **Variable parameter** 
-    - **Procedure parameter** 
+    - **Constant parameter**: the argument must be a vvalue_ which is bound the formal parameter during the procedure's execution
+    - **Variable parameter**: the argument must be a _variable_ which is bound the formal parameter during the procedure's execution
+    - **Procedure parameter**: the argument must be a _procedure_ which is bound the formal parameter during the procedure's execution
 
 ## The Correspondence Principle
+remove any unnecessary differences between declarations and parameter passing mechanisms.
+States that for each form of delcaration there exists a corresponding parameter passing mechanism.
 
 # Assertions and Exceptions
 -------------
