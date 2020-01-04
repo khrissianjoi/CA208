@@ -150,6 +150,7 @@ The SOLID principles are _**five** dependecy management_ for OOP and design.
 - ### Liskov Substitution Principle (LSP):
     states that "functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it".
 
+    - states that subclasses should be able to substitute for their base classes.
     If you create a class with a dependency of a given type, you should be able to provide an object of that type or any of its subclasses without introducing unexpected results and without the dependent class knowing the actual type of the provided dependency. If the type of the dependency must be checked so that behaviour can be modified according to type, or if subtypes generated unexpected rules or side effects, the code may become more complex, rigid and fragile.
 
 - ### Interface Segregation Principle (ISP):
@@ -336,3 +337,50 @@ The SOLID principles are _**five** dependecy management_ for OOP and design.
 
 # Unified Modeling Language (UML)
 A standerdized modelling language that enables developers to _**visualise**_, _**construct**_, and _**document**_ artifacts of a software system.
+
+## Packages
+Packages are used for:
+    - **Convenience** (eg. to hide irrelevant detail)
+    - Allocate work among team members
+    - Specify and design a component
+
+# Correctness and Sufficiency
+
+## Correctness
+Each part of the software or related to it satisfies the designated requirements and that together they satisfy all of the application's requirements
+
+# Flexibility, Re-Usability, Efficiency
+
+## Flexibility
+1. Adding more of the same kind of functionality.
+    - eg: bank applications should be able to handle other kinds of accounts without changing existing design or code.
+2. Adding different functionality.
+    - eg. add withdraw functionality to esixting deposit functionality
+3. Change functionality
+    - eg. allow overdrafts
+
+## Re-usability
+
+Re-use of methods, classes and combinations.
+Qualities to make a method re-usable:
+    - Its usage is defined completely in terms of pre-conditions.
+    - It is uncoupled as much as possible from its enclosing class.
+    - Its algorithm is explained in detail.
+Qualities to make a class re-usable:
+    - A complete class description
+    - Class name and functionality match a real world concept
+    - Reduced dependency on other classes
+
+
+## Efficiency
+
+1. Design for other criteria, Then cosider efficiency
+    - make targeted changes to improve efficiency
+2. Design for efficiency from the start
+3. Combine (1) and (2)
+
+### Trading off Robustness, Flexibility, Efficiency, Re-usability
+1. (A) Extreme Programming Approach (Design for Sufficiency only) OR
+1. (B) Flexibility-Driven Approach (Design for future requirements; Re-use should be a by-product)
+2. Ensure Robustness
+3. Provide enough Efficiency (Compromise re-use etc as necessary to attain efficiency requirements)

@@ -183,6 +183,47 @@ An expression that contains a local declaration d (or a group of declaration) an
     - **C++:** a mix of programmer control and data structure lifetime
     - **Java:** automatic, garbage collection
 
+```C
+int main()
+{
+    // This pointer will hold the 
+    // base address of the block created 
+    int* ptr; 
+    int n, i; 
+  
+    // Get the number of elements for the array 
+    n = 5;
+  
+    // Dynamically allocate memory using malloc() 
+    ptr = (int*)malloc(n * sizeof(int)); 
+  
+    // Check if the memory has been successfully 
+    // allocated by malloc or not 
+    if (ptr == NULL) { 
+        printf("Memory not allocated.\n"); 
+        exit(0); 
+    } 
+    else { 
+  
+        // Memory has been successfully allocated 
+        printf("Memory successfully allocated using malloc.\n"); 
+  
+        // Get the elements of the array 
+        for (i = 0; i < n; ++i) { 
+            ptr[i] = i + 1; 
+        } 
+  
+        // Print the elements of the array 
+        printf("The elements of the array are: "); 
+        for (i = 0; i < n; ++i) { 
+            printf("%d, ", ptr[i]); 
+        } 
+        ptr = *n
+        // do something.... memory leak
+    } 
+    return 0; 
+} 
+```
 ### Garbage Collection
 Java garbage collecction
 
@@ -303,6 +344,21 @@ When the appropriate method is invoked to a type of object after examiniation.
 
 # Logic Programming Paradigm
 -------------
+## Mapping vs. Relations
+- Prolog: based on the concept of relations (many-to-many replationship)
+- Relations are a more general concept than mappings
+
+#### Mappings
+ask:
+Given _a_, determine _m(a)_.
+
+#### Relations
+ask:
+Given _a_ and _u_, determine _r(a,u)_ is true.
+Given _a_, find all the values _y_ such that, _r(a,u)_ is **true**.
+Given _u_, find all the values a such that, _r(a,u)_ is **true**.
+Find all the values _x_ and _y_ such that _r(x,y)_ is **true**.
+
 **Based on the following three concepts:**
 
 ### Assertions

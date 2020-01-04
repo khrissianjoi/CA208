@@ -26,6 +26,7 @@
     - **parametric polymorphism**:
         - a function operates on values of a type family rather than just one type
     - **data abstractions**:
+        - the reduction of a particular body of data to a simplified representation of the whole. 
     - **lazy evaluation**:
         - relates to when an expression is evaluated.
 
