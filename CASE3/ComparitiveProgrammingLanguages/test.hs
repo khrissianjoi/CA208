@@ -27,3 +27,11 @@ check :: Int -> Number
 check n =
     let pi = Inexact 3
     in pi
+
+-- pattern matching
+data Shape = Point | Circle Float | Rectangle Float Float
+
+area :: Shape -> Float
+area Point = 0.0
+area (Circle r) = pi * r * r
+are (Rectangle x y) = x * y

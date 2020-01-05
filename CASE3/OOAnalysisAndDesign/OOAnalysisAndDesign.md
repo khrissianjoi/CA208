@@ -338,11 +338,20 @@ The SOLID principles are _**five** dependecy management_ for OOP and design.
 # Unified Modeling Language (UML)
 A standerdized modelling language that enables developers to _**visualise**_, _**construct**_, and _**document**_ artifacts of a software system.
 
+### State Machines
+
+![State Machine](../images/statemachine.png)
+**states**: round boxes
+**transitions between states**: arrows
+**events that cause transitions**: message on transition arrows
+**start marker**: black blob
+**stop marker**: black blob with ring
+
 ## Packages
 Packages are used for:
     - **Convenience** (eg. to hide irrelevant detail)
-    - Allocate work among team members
-    - Specify and design a component
+    - **Allocate** work among team members
+    - **Specify** and design a component
 
 # Correctness and Sufficiency
 
