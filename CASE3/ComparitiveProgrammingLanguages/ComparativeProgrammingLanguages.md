@@ -111,7 +111,7 @@ eg: Traffic Light: green(bottom);yellow;red
 
 ### Semantics
 Defines the meaning of a program.
-Two ways of formally specifying the sematics of a language:
+Two ways of formally specifying the sematnics of a language:
     - **Axiomatic Semantics**: defines the execution of a program in terms of a state machine
     - **Denotational Semantics**: specifies each language statement in terms of mathematical objects.
 
@@ -254,16 +254,66 @@ Major approaches:
 - allows us to focus on general ideas rather than specific manifestations of these ideas.
 - hides all but the relevant data about an object in order to reduce complexity and increase efficiency.
 
+## Control Flow
+**Sequencer**: programming constructs that influence the flow of control
+**Jumps**: can transfer control anywhere in the program
+```Assembly
+    JMP start
+    ORG 12
+start:
+    MOV AL,48
+    MOV BL, 10
+    ADD AL, BL
+    END
+```
+**Escapes**: transfer control out of an enclosing commands or procedures
+```Python
+def isPresent(myElements, item):
+    for element in myElements:
+        if element == item:
+            return True
+    return False
+```
+**Exceptions**: signal and handle abnormal situations
+```Java
+public class MyClass {
+  public static void main(String[] args) {
+    try {
+      int[] myNumbers = {1, 2, 3};
+      System.out.println(myNumbers[10]);
+    } catch (Exception e) {
+      System.out.println("Something went wrong.");
+    } finally {
+      System.out.println("The 'try catch' is finished.");
+    }
+  }
+}
+```
 ### Proper Procedure
 - contains _command_ to be executed.
 - when it is called it will update variables.
+- a special case of function procedure where the return type is **void**
+```C++
+void adder(int result, int x, int y)
+{
+    result = x + y;
+}
+```
 ### Function Procedure
 - contains an _expression_ to be evalutated 
 - returns a result.
+```python
+def adder(x,y):
+    return x + y
+```
 
 ### The Abstraction Principle
 construct other types of procedures.
 This states that it is possible to design procedures that abstract over any syntactic category, provided only that the constructs in the syntactic category specify some kind of computation.
+
+We can apply the Abstraction Principle to variable access so that
+when the procedure is called it would result in a variable. This
+results in a selector procedure that are supported in C++.
 
 ## Parameters and Arguments
 
@@ -295,8 +345,27 @@ def main():
     - **Procedure parameter**: the argument must be a _procedure_ which is bound the formal parameter during the procedure's execution
 
 ## The Correspondence Principle
-remove any unnecessary differences between declarations and parameter passing mechanisms.
+removing any unnecessary differences between declarations and parameter passing mechanisms.
 States that for each form of delcaration there exists a corresponding parameter passing mechanism.
+
+- _**constant parameter**_: similar to constant definition
+- _**variable parameter**_: similar to variable renaming definiton
+- _**copy-in parameter**_: similar to an initialised variable declaration.
+
+## Packages
+A group of several components (types, constants, variables, procedures)declared for a common purpose
+```Ada
+package Earth is
+    type Continent is
+        (Africa, Antartica, Asia, Australia, Europe, NAmerica, S America);
+    
+    radius : constant FLoat := 6.4e3;
+    area : constant array (Continent) of Float := (30.3e6, 13.0e6, 43.3e6, 7.7e6, 10.4e6, 29.4e6, 178e6);
+    
+    population : array (Continent) of Integer;
+end Earth;
+```
+allows an application programmer to use components from the package
 
 # Assertions and Exceptions
 -------------
@@ -399,7 +468,7 @@ every variable is either:
 - a variable the occurs in the left-hand side of a clause.
 
 ### Existentially Quantified
-- a varialbe the occurs in the righh-hand side of a clause.
+- a variable the occurs in the righh-hand side of a clause.
 - a variable that occurs in a query.
 
 ## Cut
@@ -433,7 +502,8 @@ Database manipulation commands give us the ability to:
     - can be built into composite values
 - ### Parametric Polymorphism
     - a function operates on values of a type family rather than just one type
-- ### Data Abstrations
+- ### Data Abstractions
+    - the reduction of a particular body of data to a simplified representation of the whole.
 - ### Lazy Evaluation
     - relates to when an expression is evaluated.
     - order of evaluation:
@@ -445,6 +515,13 @@ Database manipulation commands give us the ability to:
             - to substitute the actual _unevaluated_ parameter for each occurence of the formal parameter
         - Lazy evaluation:
             - evaluate the actual parameter when the argument is _first_ needed and then store its value for whenever it is subsequently needed.
+
+## Haskell: Bindings and Scope
+A Haskell program is a collection of modules. One of these modules is call MAIN and one of its components must be a function called main.
+
+Inside a module we may define constants, types and functions. These can be in any order so a function can be defined in terms of another function define later in the module. Functions can be directly or mutually recursive.
+
+Inside a block expression we can define constants and functions whose scope is the block expression. We cannot define types inside a block expression.
 
 ## Haskell: Higher Order Functions
 A function that has functional parameters or functional results.
@@ -468,6 +545,7 @@ powerc n b
     | otherwise = b * powerc x b
     where x = n - 1
 ```
+
 - Curried Function
 - Partial Application
 
@@ -476,4 +554,22 @@ powerc n b
 **foldr**: recursively combines the first element with the results of combining the rest of the list.
 **foldl**: recursively combines the last element with the results of combining the previous elements of the list.
 
+# Memory Models
 
+## RAM
+## Stack
+
+## Associative
+- Typically data is stored in tuples
+- Memory is 'addressed' by the contents of the tuple
+- Used in specific environments where memory is either:
+    - outside the processor's address space
+    - the data is constantly being moved for optimisation purposes
+- **Disadvantage:** Expensive to implement 
+- **Advantage**: can use very high-speed searching applications
+
+### JavaSpace
+Every object stored in a JavaSpace must implement
+    - **Entry Interface**:
+        - strongly typed collection of public, nonstatic, nonfinal, nontransient objects.
+        - searched for using techniques and rules in Jini lookup service.
