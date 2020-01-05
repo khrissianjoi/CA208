@@ -85,7 +85,7 @@ Recursive types occur in:
 
 ### Static vs. Dynamic Scoping
 #### Statically Scoped
-- the body of a procedure is executed in the environemnt of the _procedure's definition_.
+- the body of a procedure is executed in the environment of the _procedure's definition_.
 - **Binding Occurence:** examining the program's source code.
 
 #### Dynamically Scoped
@@ -136,7 +136,6 @@ Setting the value of an attribute.
 
 ### Scope
 The scope of a _decleration_ is the section of the programme text in which the decleration is in effect.
-
 The scope of a _binding_ is the section of the programme text in which the binding is applied.
 
 ## Blocks
@@ -173,16 +172,15 @@ An expression that contains a local declaration d (or a group of declaration) an
 # Pointers and Memory Management
 -------------
 ### Managing Dynamic Memory
-#### Allocate memory
+#### Allocate Memory
 - request a block of memory big enough to a defined data element. 
 - run-time system allocates a sufficient block of memory for the memory pool and returns a pointer to the allocated block and returns the pointer to the allocated block
-#### Release memory
+#### Release Memory
 (where languages differ)
 - the allocated memory is released back to the memory pool.
     - **C:** programmer controls the release of memory
     - **C++:** a mix of programmer control and data structure lifetime
     - **Java:** automatic, garbage collection
-
 ```C
 int main()
 {
@@ -218,8 +216,7 @@ int main()
         for (i = 0; i < n; ++i) { 
             printf("%d, ", ptr[i]); 
         } 
-        ptr = *n
-        // do something.... memory leak
+        free(ptr)
     } 
     return 0; 
 } 
@@ -304,7 +301,8 @@ void adder(int result, int x, int y)
 - returns a result.
 ```python
 def adder(x,y):
-    return x + y
+    z = x + y
+    return z
 ```
 
 ### The Abstraction Principle
@@ -353,7 +351,7 @@ States that for each form of delcaration there exists a corresponding parameter 
 - _**copy-in parameter**_: similar to an initialised variable declaration.
 
 ## Packages
-A group of several components (types, constants, variables, procedures)declared for a common purpose
+A group of several components (types, constants, variables, procedures) declared for a common purpose
 ```Ada
 package Earth is
     type Continent is
@@ -393,9 +391,7 @@ Uses pre-conditions and post-conditions to document the change in state caused b
     - Implementing a balanced tree data structure.
     - A class invariant could be that the tree is balanced.
     - This could be implemented as a private method checking that the tree was balanced.
-- _**Loop invariants**_ must be true in each iteration of a loop (Design by Refinement):
-    -
-
+- _**Loop invariants**_ must be true in each iteration of a loop (Design by Refinement)
 
 
 ## Exceptions
@@ -468,7 +464,7 @@ every variable is either:
 - a variable the occurs in the left-hand side of a clause.
 
 ### Existentially Quantified
-- a variable the occurs in the righh-hand side of a clause.
+- a variable the occurs in the right-hand side of a clause.
 - a variable that occurs in a query.
 
 ## Cut
@@ -517,11 +513,16 @@ Database manipulation commands give us the ability to:
             - evaluate the actual parameter when the argument is _first_ needed and then store its value for whenever it is subsequently needed.
 
 ## Haskell: Bindings and Scope
-A Haskell program is a collection of modules. One of these modules is call MAIN and one of its components must be a function called main.
-
-Inside a module we may define constants, types and functions. These can be in any order so a function can be defined in terms of another function define later in the module. Functions can be directly or mutually recursive.
+- A Haskell program is a collection of modules.
+- Inside a module we may define constants, types and functions.
+- Functions can be directly or mutually recursive.
 
 Inside a block expression we can define constants and functions whose scope is the block expression. We cannot define types inside a block expression.
+
+
+## Haskell: Pattern Matching
+A pattern is like an expression that has binding occurences of identifiers.
+A pattern is said to be match if there exists a binding for the identifiers such that the pattern yields to it.
 
 ## Haskell: Higher Order Functions
 A function that has functional parameters or functional results.
@@ -569,7 +570,23 @@ powerc n b
 - **Advantage**: can use very high-speed searching applications
 
 ### JavaSpace
+A logically shared, associatively addressed memory space.
 Every object stored in a JavaSpace must implement
     - **Entry Interface**:
         - strongly typed collection of public, nonstatic, nonfinal, nontransient objects.
         - searched for using techniques and rules in Jini lookup service.
+```Java
+import net.jini.core.entry.*;
+public class MessageEntry implements Entry {
+    public String content;
+    public MessageEntry() {
+
+    }
+    public MessageEntry(String content) {
+        this.content = content;
+    }
+    public String toString() {
+        return "Message content: " + content;
+    }
+}
+```

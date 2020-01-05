@@ -6,6 +6,7 @@ oddT n
     | n `mod` 2 == 0 = True
     | otherwise = False
 -- even = not . odd
+-- higher order function
 power :: (Int,Float) ->Float
 power (n,b)
     | n == 0 = 0.0
@@ -32,6 +33,14 @@ check n =
 data Shape = Point | Circle Float | Rectangle Float Float
 
 area :: Shape -> Float
-area Point = 0.0
-area (Circle r) = pi * r * r
-are (Rectangle x y) = x * y
+area s =
+    case s of 
+        Point -> 0.0
+        Circle r -> pi * r * r
+        Rectangle w h -> w * h
+
+myDelete :: Int -> [Int] -> [Int]
+myDelete element (currentElem:[]) = [currentElem]
+myDelete element (currentElem:remainingElem)
+    | element == currentElem = remainingElem
+    | otherwise = [currentElem] ++ myDelete element remainingElem
