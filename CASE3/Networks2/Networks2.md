@@ -207,6 +207,11 @@ mcgorma.computing.dcu.ie = Admin email
 2419200 = expire (4 weeks), When the zone data is no longer authoritative, used by slave dns servers
 604800 = Negative cache TTL – caching error responses, e.g. 404
 ```
+## DNS Lab
+configuring BIND9 (used for maintaining a name server on Linux):
+- **Caching nameserver**: find the answer to name queries and remember the answer when the domain is queried again
+- **Primary master**: as a primary master server BIND9 reads the data for a zone from a  file on it's host and is authoritative for that zone.
+- **Secondary master**: gets the zone data from another nameserver authoritative for the zone.
 
 # Spanning Trees
 
