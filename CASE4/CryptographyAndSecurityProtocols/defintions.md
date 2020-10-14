@@ -50,6 +50,40 @@ Examples:
   - Modifying the information in an unauthorised manner
   - Denying access to information for legitimate users (denial of service)
 
+### Cryptographic Attacks
+
+#### Ciphertext Only Attack
+Attacker has access to a set of ciphertext, but does not have access to the corresponding plaintext. Corressponding plaintext can be determined from a given set of ciphertext
+
+
+#### Known Plaintext Attack
+Attacker knows the plaintext for some parts of the ciphertext. The task is to decrypt the rest of the ciphertext using the information.
+
+#### Chosen Plaintext Attack
+Chooses the plaintext to be encrypted, has the ciphertext-plaintext pair of their choice. This simplifies the task of determining the encryption key.
+
+#### Chosen Ciphertext Attack
+Chooses the ciphertxt and can obtain its decryption.
+
+#### Dictionary Attack
+Attacker builds a table of ciphertext and corresponding plaintext that they have learnt over a period of time. They will refer to the dictionary/table to find the corressponding plaintext.
+
+#### Brute Force Attack
+Attacker tries to determine the key by attempting all possible keys.
+
+#### Man in the Middle Attack
+Attacker inserts themself in between the communication between two participants (A and B). The attacker masquerades as A to B, and as B to A, intercepting their communications and being able to decrypt them.
+
+#### Replay Attack
+In this type of attack, the attacker captures every piece of traffic between A and B during normal operation. Later, the attacker re-sends the first piece of traffic and waits for B’s response before sending the next piece, and so on. If B does not implement some protection against replay attacks, the attacker may be able to achieve a valid session with B while masquerading as A.
+- Basically assuming that B will make a hiccup (no protection) as the attacker pretends to be A during their interaction.
+
+#### Side Channel Attack
+Exploit any weakness in the physical implementation of the cryptosystem.
+
+#### Attacks in Reality
+Attacks on the system administrators or users, where attackers gain access through subterfuge, susceptibility to greed, or through physical violence or threat of violence.
+
 ### Main Security Objectives
 
 #### Confidentiality
