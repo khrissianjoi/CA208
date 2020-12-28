@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["bCcL+"]); }
+
+__d("CometVideoHomeLanceletHomeRoot.entrypoint",["JSResourceForInteraction","buildCometVideoHomeRoute.entrypoint","CometSinglePageHomeRoot.entrypoint"],(function(a,b,c,d,e,f){"use strict";a=b("buildCometVideoHomeRoute.entrypoint")(b("JSResourceForInteraction")("CometVideoHomeLanceletRoot.react").__setRef("CometVideoHomeLanceletHomeRoot.entrypoint"),function(a){return{entryPoints:{pageEntryPoint:{entryPoint:b("CometSinglePageHomeRoot.entrypoint"),entryPointParams:a}},extraProps:a}});e.exports=a}),null);

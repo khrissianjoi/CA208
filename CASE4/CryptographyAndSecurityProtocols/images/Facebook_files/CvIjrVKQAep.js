@@ -1,0 +1,4 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["6QpYX"]); }
+
+__d("XCometGroupDiscussionControllerRouteBuilder",["jsRouteBuilder"],(function(a,b,c,d,e,f){a=b("jsRouteBuilder")("/groups/{idorvanity}/{?view}/{?post_id}/",Object.freeze({modal:!1,should_open_composer:!1}),void 0);c=a;e.exports=c}),null);
+__d("GroupsCometAdminMembershipQuestionsStrings",["fbt"],(function(a,b,c,d,e,f,g){"use strict";a={add_question:g._("Add Question"),question_null_state_body:g._("Ask pending members up to three questions when they request to join your group. Only admins and moderators will see the answers."),question_null_state_headline:g._("Membership Questions"),rules_agreement_toggle_description:g._("Include your group rules and ask pending members to select that they agree to them."),rules_null_state_description:g._("Create group rules and ask pending members to agree to them.")};f.GroupsCometAdminMembershipQuestionStrings=a}),null);

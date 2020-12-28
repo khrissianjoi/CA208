@@ -2,6 +2,7 @@ C1Cost = 0
 C2Cost = 0
 
 def calculations(value):
+  #K=2
   x = int(value[0])
   y = int(value[1])
   xC1Value = abs(x - xC1rep)

@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["wgFwL"]); }
+
+__d("StoriesCometSuspenseSingleBucketRootWithEntryPoint.entrypoint",["JSResourceForInteraction","StoriesGatingEntrypoint","StoriesSuspenseContentPaneRootWithEntryPointQuery$Parameters"],(function(a,b,c,d,e,f){"use strict";a={getPreloadProps:function(a){a=a.routeParams.bucket_id;a=b("StoriesGatingEntrypoint").getContentPaneParams(a);return{queries:{storiesSuspenseContentPaneRootReference:{parameters:b("StoriesSuspenseContentPaneRootWithEntryPointQuery$Parameters"),variables:a}}}},root:b("JSResourceForInteraction")("StoriesCometSuspenseSingleBucketRootWithEntryPoint.react").__setRef("StoriesCometSuspenseSingleBucketRootWithEntryPoint.entrypoint")};e.exports=a}),null);

@@ -24,7 +24,9 @@ def calculate_p(q, r, s, t):
   return sum(q, r, s, t)
 
 def asymmetricBinaryDissimilarity(table, labels):
-  for currentPair in combinations(["JACK", "MARY", "JIM"], 2):
+  counter = 0
+  for currentPair in combinations(labels, 2):
+    counter += 1 
     i = currentPair[0]
     j = currentPair[1]
 
@@ -43,14 +45,22 @@ def asymmetricBinaryDissimilarity(table, labels):
     finalValue = top / bottom
 
     equation=' ({0} + {1}) / ({2} + {3} + {4})'.format(r, s, q, r, s)
+    
     print(equation)
     print(currentPair, finalValue)
-  
+  print("total combinations:", counter)
 table = {
-  "JACK" : [1,0,1,0,0,0],
-  "MARY" : [1,0,1,0,1,0],
-  "JIM": [1,1,0,0,0,0]
+  "A" : [1,1,1,1,1,0],
+  "B" : [1,0,0,0,1,1],
+  "C" : [1,1,1,0,1,0],
+  "D" : [1,0,0,0,0,0],
+  "E" : [0,1,1,1,1,0],
   }
   
-labels = ["JACK", "MARY", "JIM"]
+labels = ["A",
+"B",
+"C",
+"D",
+"E"]
+
 asymmetricBinaryDissimilarity(table, labels)

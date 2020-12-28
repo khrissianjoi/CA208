@@ -1,0 +1,4 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["GLd8z"]); }
+
+__d("CometNotificationsRootQuery$Parameters",[],(function(a,b,c,d,e,f){"use strict";a={kind:"PreloadableConcreteRequest",params:{id:"2291240734333737",metadata:{},name:"CometNotificationsRootQuery",operationKind:"query",text:null}};e.exports=a}),null);
+__d("CometNotificationsRoot.entrypoint",["JSResource","WebPixelRatio","CometNotificationsRootQuery$Parameters"],(function(a,b,c,d,e,f){"use strict";a={getPreloadProps:function(a){a={count:15,environment:"MAIN_SURFACE",scale:b("WebPixelRatio").get()};return{queries:{notificationsRootQueryReference:{parameters:b("CometNotificationsRootQuery$Parameters"),variables:a}}}},root:b("JSResource")("CometNotificationsRoot.react").__setRef("CometNotificationsRoot.entrypoint")};e.exports=a}),null);
